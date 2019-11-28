@@ -1,8 +1,8 @@
 //DATA
 const nike1 = {
-  name: `Nike shoes 1`,
+  name: `Court majestic Sneakers`,
   imageUrl: `img/nike/casual/nike-casual%20(1).jpeg`,
-  alternateName: `shoes-alt-name`,
+  alternateName: `Nike-court-majestic-sneakers`,
   category: `casual`,
   productCode: `NC100`,
   price: `120`,
@@ -22,7 +22,7 @@ const nike2 = {
   altname: `nikeshoe2`,
   category: `casual`,
   productCode: `NC101`,
-  price: `120`,
+  price: `100`,
   rating: 3.2,
   brand: `nike`,
   description: `best shoes ever`,
@@ -56,7 +56,7 @@ const nike4 = {
   productCode: `WDDM-117`,
   altname: `nikeshoe3`,
   category: `casual`,
-  price: `140`,
+  price: `160`,
   rating: 3.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -73,7 +73,7 @@ const nike5 = {
   productCode: `WDDM-117`,
   altname: `nikeshoe3`,
   category: `casual`,
-  price: `140`,
+  price: `180`,
   rating: 3.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -90,7 +90,7 @@ const nike6 = {
   productCode: `WDDM-117`,
   altname: `nikeshoe3`,
   category: `casual`,
-  price: `140`,
+  price: `200`,
   rating: 3.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -107,7 +107,7 @@ const nike7 = {
   productCode: `WDDM-117`,
   altname: `nikeshoe3`,
   category: `casual`,
-  price: `140`,
+  price: `110`,
   rating: 3.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -124,7 +124,7 @@ const nike8 = {
   productCode: `NS100`,
   altname: `nikeshoe3`,
   category: `sports`,
-  price: `140`,
+  price: `210`,
   rating: 3.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -141,7 +141,7 @@ const nike9 = {
   productCode: `NS101`,
   altname: `nikeshoe3`,
   category: `sports`,
-  price: `160`,
+  price: `190`,
   rating: 4.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -158,7 +158,7 @@ const nike10 = {
   productCode: `NS102`,
   altname: `nikeshoe3`,
   category: `sports`,
-  price: `160`,
+  price: `220`,
   rating: 4.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -175,7 +175,7 @@ const nike11 = {
   productCode: `NS103`,
   altname: `nikeshoe3`,
   category: `sports`,
-  price: `160`,
+  price: `170`,
   rating: 4.1,
   brand: `nike`,
   description: `best shoes ever`,
@@ -206,7 +206,7 @@ const puma1 = {
   altname: `pumashoes1`,
   category: `casual`,
   productCode: `PUMA100`,
-  price: `1200`,
+  price: `100`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -223,7 +223,7 @@ const puma2 = {
   altname: `pumashoes1`,
   category: `casual`,
   productCode: `PUMA101`,
-  price: `1200`,
+  price: `110`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -240,7 +240,7 @@ const puma3 = {
   altname: `pumashoes3`,
   category: `casual`,
   productCode: `PUMA102`,
-  price: `1200`,
+  price: `120`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -257,7 +257,7 @@ const puma4 = {
   altname: `pumashoes3`,
   category: `casual`,
   productCode: `PUMA103`,
-  price: `1200`,
+  price: `130`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -274,7 +274,7 @@ const puma5 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA104`,
-  price: `1200`,
+  price: `140`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -291,8 +291,8 @@ const puma6 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA105`,
-  price: `1200`,
-  rating: 2,
+  price: `150`,
+  rating: 1,
   brand: `puma`,
   description: `best shoes ever`,
   colors: [`red`, `blue`],
@@ -308,7 +308,7 @@ const puma7 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA106`,
-  price: `1200`,
+  price: `160`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -325,7 +325,7 @@ const puma8 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA107`,
-  price: `1200`,
+  price: `170`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -342,7 +342,7 @@ const puma9 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA108`,
-  price: `1200`,
+  price: `180`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -359,7 +359,7 @@ const puma10 = {
   altname: `pumashoes3`,
   category: `running`,
   productCode: `PUMA109`,
-  price: `1200`,
+  price: `190`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -376,7 +376,7 @@ const puma11 = {
   altname: `pumashoes3`,
   category: `sports`,
   productCode: `PUMA110`,
-  price: `1200`,
+  price: `120`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -393,7 +393,7 @@ const puma12 = {
   altname: `pumashoes3`,
   category: `sports`,
   productCode: `PUMA111`,
-  price: `1200`,
+  price: `200`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -410,7 +410,7 @@ const puma13 = {
   altname: `pumashoes3`,
   category: `sports`,
   productCode: `PUMA110`,
-  price: `1200`,
+  price: `210`,
   rating: 2,
   brand: `puma`,
   description: `best shoes ever`,
@@ -443,14 +443,14 @@ function getShoesAsHtml(shoesData) {
   return `
     <section class="productsCard">
     <section class="container">
-    <img src="${shoesData.imageUrl}" alt="${shoesData.altname}" style="width:100%;height:50%;">
+    <img clas="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.altname}" style="width:100%;height:130px;">
     <button type="button" class="heartBtn" id="heartBtn"><span class="material-icons">favorite</span></button>
     </section>
-    <h1><strong>${shoesData.name}</strong></h1>
+    <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
         <ul class="productCardList">
-          <li class="productCardListItem><h3>${shoesData.description}</h3></li>
-          <li class="productCardListItem"><h3>Price:$${shoesData.price}</h3></li>
-          <li class="productCardListItem"><p>Average rating:${shoesData.rating}<p></li>
+          <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
+          <li class="productCardListItem"><h3>Price: $${shoesData.price}</h3></li>
+          <li class="productCardListItem"><p>Average rating: ${shoesData.rating}<p></li>
         </ul>
         <button type="button" class="productCardButton" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> 
         </section>`;
@@ -471,15 +471,53 @@ function addToWishlist() {
   document.getElementById(`heartBtn`).style.color = `red`;
 }
 
-const PriceHighToLowArray = shoesData.sort(function(a, b) {
-  return a.price > b.price;
-});
-const PriceHighToLowArray = shoesData.slice(0);
+function sortPriceHighTolow() {
+  alert("in high to low");
+  const PriceHighToLowArray = shoesData
+    .slice(0)
+    .sort((a, b) => (a.price < b.price ? 1 : -1));
+  renderProducts(PriceHighToLowArray);
+}
 
-PriceHighToLowArray.sort((a, b) => (a.price > b.price ? 1 : -1));
+function sortPriceLowToHigh() {
+  alert("in low to high");
+  const PriceLowToHighArray = shoesData
+    .slice(0)
+    .sort((a, b) => (a.price > b.price ? 1 : -1));
+  renderProducts(PriceLowToHighArray);
+}
 
-alert(PriceHighToLowArray);
+function sortByAvailability() {
+  alert("in availability function");
+  const availabilityArray = shoesData
+    .slice(0)
+    .sort((a, b) => (a.stock < b.stock ? 1 : -1));
+  renderProducts(availabilityArray);
+}
 
+function sortByRatings() {
+  alert("in rating function");
+  const ratingArray = shoesData
+    .slice(0)
+    .sort((a, b) => (a.rating < b.rating ? 1 : -1));
+  renderProducts(ratingArray);
+}
+
+function renderProducts(arr) {
+  document.getElementById(`app`).innerHTML = arr.map(getShoesAsHtml).join("\n");
+}
 //execution
 document.getElementById(`addtocart`).addEventListener("click", addToCart);
 document.getElementById(`heartBtn`).addEventListener("click", addToWishlist);
+document
+  .getElementById(`PriceHighToLow`)
+  .addEventListener("click", sortPriceHighTolow);
+document
+  .getElementById(`PriceLowToHigh`)
+  .addEventListener("click", sortPriceLowToHigh);
+document
+  .getElementById(`availability`)
+  .addEventListener("click", sortByAvailability);
+document.getElementById(`topRated`).addEventListener("click", sortByRatings);
+
+getShoesAsHtml(shoesData);

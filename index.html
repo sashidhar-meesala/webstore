@@ -9,6 +9,8 @@
   <meta name="author" content="[Your Name]">
   <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Baskervville|Bebas+Neue|Roboto|Roboto+Mono&display=swap"
+    rel="stylesheet">
   <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
   <link rel="stylesheet" href="css/index.css">
 </head>
@@ -65,19 +67,24 @@
     <section class="sortMenu">
       <ul class="sortOptionsList">
         <li class="sortOptionsListItem">
-          <h1>Sort By</h1>
+          <h1 style=" font-family: 'Roboto Mono', monospace;">Sort By</h1>
         </li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Price Low to High</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Price High to Low</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Availability</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Top Rated</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceLowToHigh">Price Low to
+            High</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceHighToLow">Price High to
+            Low</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn"
+            id="availability">Availability</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button>
+        </li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="onSale">On Sale!</button></li>
       </ul>
     </section>
     <section class="layoutTheme">
       <!-- Filtering product form -->
       <article class="sidenav">
         <form>
-          <h1 style="font-weight:bold;">Filter By</h1>
+          <h1 style="font-weight:bold;  font-family: 'Roboto Mono', monospace;">Filter By</h1>
           <hr>
           <fieldset>
             <legend>Colour</legend>
@@ -157,8 +164,8 @@
     <footer class="footermenu">
       <section class="footersection">
         <article class="footerarticle">
-          <h1 style="font-weight:bold">About</h1>
-          <ul>
+          <h1>About</h1>
+          <ul class="footermenulist">
             <li>contact us</li>
             <li>About us</li>
             <li>Careers</li>
@@ -166,8 +173,8 @@
           </ul>
         </article>
         <article class="footerarticle">
-          <h1 style="font-weight:bold">Help</h1>
-          <ul>
+          <h1>Help</h1>
+          <ul class="footermenulist">
             <li>Payment</li>
             <li>Shipping</li>
             <li>Cancellation</li>
@@ -175,8 +182,8 @@
           </ul>
         </article>
         <article class="footerarticle">
-          <h1 style="font-weight:bold">Policy</h1>
-          <ul>
+          <h1>Policy</h1>
+          <ul class="footermenulist">
             <li>Return Policy</li>
             <li>Terms of Use</li>
             <li>Security</li>
@@ -184,8 +191,8 @@
           </ul>
         </article>
         <article class="footerarticle">
-          <h1 style="font-weight:bold">Social</h1>
-          <ul>
+          <h1>Social</h1>
+          <ul class="footermenulist">
             <li>Facebook</li>
             <li>Linkedin</li>
             <li>Instagram</li>
