@@ -16,13 +16,25 @@
 <body>
   <header>
     <!-- Site logo, replace with your own -->
-    <a href="index.html"><img src="" alt="HTML Logo (replace this)"></a>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><i class="fab fa-airbnb"></i></li>
+        <li class="main-nav-list-items"><a href="#">Home</a></li>
+        <li class="main-nav-list-items"><a href="#">Products</a></li>
+        <li class="main-nav-list-items"><a href="#">Explore</a></li>
+        <li style="float:right;" class="main-nav-list-items"><button><span
+              class="material-icons iconfav">favorite_border</span> Wishlist</button>
+        </li>
+        <li style="float:right;" class="main-nav-list-items"><button><span
+              class="material-icons iconcart">shopping_cart</span>My cart</button></li>
+      </ul>
+    </nav>
 
-    <button type="button">
+    <!--<button type="button">
       <span class="material-icons">menu</span>
-    </button>
+    </button> -->
 
-    <!-- Navigation menu and toggle button (example) -->
+    <!-- Navigation menu and toggle button (example) 
     <nav aria-label="Primary">
       <ul>
         <li><a href="#">Webpage</a>
@@ -36,39 +48,37 @@
         <li><a href="#">Webpage</a></li>
         <li><a href="#">Webpage</a></li>
       </ul>
-    </nav>
+    </nav>-->
 
     <!-- Search the site -->
-    <form>
-      <label>Search
+    <form class="search">
+      <label>Search Products
         <input type="search" name="find" id="find">
       </label>
       <button type="button"><span class="material-icons">search</span></button>
     </form>
 
-    <!-- Additional functionality or links -->
-    <ul>
-      <li><button><span class="material-icons">favorite_border</span></button></li>
-      <li><button><span class="material-icons">shopping_cart</span></button></li>
-    </ul>
   </header>
 
   <main>
     <!--<h1 style="text-align: center;"><label id="headingH1"></label>Displaying products</h1>-->
     <section class="sortMenu">
       <ul class="sortOptionsList">
-        <li class="sortOptionsListItem"><h1>Sort By</h1></li>
+        <li class="sortOptionsListItem">
+          <h1>Sort By</h1>
+        </li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Price Low to High</button></li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Price High to Low</button></li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Availability</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Top Rated</button></li>     
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn">Top Rated</button></li>
       </ul>
     </section>
     <section class="layoutTheme">
       <!-- Filtering product form -->
       <article class="sidenav">
         <form>
-          <h2 style="font-weight:bold;">Filters</h2>
+          <h1 style="font-weight:bold;">Filter By</h1>
+          <hr>
           <fieldset>
             <legend>Colour</legend>
             <ul>
@@ -79,16 +89,18 @@
               <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
             </ul>
           </fieldset>
+          <hr>
           <fieldset>
             <legend>Sizes</legend>
             <ol>
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+              <li><input type="checkbox" name="size" value="6" id="uksix"> <label for="6">UK 6</label></li>
+              <li><input type="checkbox" name="size" value="7" id="ukseven"> <label for="7">UK 7</label></li>
+              <li><input type="checkbox" name="size" value="8" id="ukseight"> <label for="8">UK 8</label></li>
+              <li><input type="checkbox" name="size" value="9" id="uknine"> <label for="9">UK 9</label></li>
+              <li><input type="checkbox" name="size" value="10" id="ukten"> <label for="10">UK 10</label></li>
             </ol>
           </fieldset>
+          <hr>
           <fieldset>
             <legend>Ratings (at least)</legend>
             <ol>
@@ -126,12 +138,61 @@
               </li>
             </ol>
           </fieldset>
+          <hr>
+          <fieldset>
+            <legend>Discount</legend>
+            <ul>
+              <li><input type="checkbox" name="discount" value="black" id="discount_ten"> <label for="ten">10%</label>
+              </li>
+              <li><input type="checkbox" name="discount" value="white" id="discount_fifteen"> <label
+                  for="fifteen">15%</label></li>
+              <li><input type="checkbox" name="discount" value="grey" id="discount_twenty"> <label
+                  for="twenty">20%</label></li>
+            </ul>
+          </fieldset>
         </form>
       </article>
       <article class="products" id="app"> </article>
     </section>
-    <footer>
-     
+    <footer class="footermenu">
+      <section class="footersection">
+        <article class="footerarticle">
+          <h1 style="font-weight:bold">About</h1>
+          <ul>
+            <li>contact us</li>
+            <li>About us</li>
+            <li>Careers</li>
+            <li>Press</li>
+          </ul>
+        </article>
+        <article class="footerarticle">
+          <h1 style="font-weight:bold">Help</h1>
+          <ul>
+            <li>Payment</li>
+            <li>Shipping</li>
+            <li>Cancellation</li>
+            <li>FAQ</li>
+          </ul>
+        </article>
+        <article class="footerarticle">
+          <h1 style="font-weight:bold">Policy</h1>
+          <ul>
+            <li>Return Policy</li>
+            <li>Terms of Use</li>
+            <li>Security</li>
+            <li>Privacy</li>
+          </ul>
+        </article>
+        <article class="footerarticle">
+          <h1 style="font-weight:bold">Social</h1>
+          <ul>
+            <li>Facebook</li>
+            <li>Linkedin</li>
+            <li>Instagram</li>
+            <li>Youtube</li>
+          </ul>
+        </article>
+      </section>
     </footer>
     <script src="js/index.js"></script>
 </body>

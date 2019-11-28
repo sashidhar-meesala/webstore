@@ -1,3 +1,46 @@
+.main-nav-list {
+    list-style-type: none;
+    margin-bottom: 1em;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(238, 158, 67);
+}
+
+.main-nav-list-items {
+    float: left;
+}
+
+.main-nav-list-items a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.search {
+    text-align: center;
+}
+
+#find {
+    text-align: center;
+    margin-left: 4em;
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(238, 158, 67);
+    color: white;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#find:focus {
+    width: 450px;
+}
+
 .sortOptionsList {
     list-style-type: none;
     text-align: center;
@@ -11,10 +54,10 @@
     padding: 20px;
 }
 
-.sortOptionsBtn{
-    background-color:white;
-    border:2px dashed rgb(224, 129, 50);
-    border-radius:12px;
+.sortOptionsBtn {
+    background-color: white;
+    border: 2px dashed rgb(238, 158, 67);
+    border-radius: 12px;
     color: black;
     padding: 10px 8px;
     text-align: center;
@@ -22,15 +65,16 @@
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-duration: 0.2s;
+    /* Safari */
     transition-duration: 0.2s;
     cursor: pointer;
 }
 
-.sortOptionsBtn:hover{
-    background-color: rgb(224, 129, 50);
-  color: white;
-  border:2px solid rgb(226, 223, 223);
+.sortOptionsBtn:hover {
+    background-color: rgb(238, 158, 67);
+    color: white;
+    border: 2px solid rgb(226, 223, 223);
 }
 
 .layoutTheme {
@@ -40,31 +84,32 @@
 
 .products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 1rem;
     padding: 2rem;
-    grid-row-gap: 1rem;
-    grid-column-gap: 1rem;
+    grid-row-gap: 0.6rem;
+    grid-column-gap: 0.6rem;
 }
 
 .productsCard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
+    height: auto;
     margin: auto;
     text-align: center;
     font-family: arial;
     padding: 0.5rem;
+    border: 1px solid rgb(238, 158, 67);
 }
-
 
 .sidenav {
-    background-color: black;
+    background-color: rgb(238, 158, 67);
     padding: 1em;
     margin: 0.5em;
-    color: white;
-    height: 70%;
-
+    color: rgb(248, 255, 249);
+    height: 30%;
 }
+
 
 .price {
     color: red;
@@ -76,7 +121,7 @@
     outline: 0;
     padding: 2px;
     color: rgb(250, 249, 249);
-    background-color: rgb(221, 75, 8);
+    background-color: rgb(238, 158, 67);
     text-align: center;
     cursor: pointer;
     font-size: 18px;
@@ -102,4 +147,14 @@
 .heartBtn:hover {
     opacity: 1;
     color: rgb(216, 51, 51);
+}
+
+.footersection {
+    background-color: rgb(238, 158, 67);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    text-align: center;
+    font-size: 18px;
 }
