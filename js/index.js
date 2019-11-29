@@ -460,16 +460,16 @@ document.getElementById(`app`).innerHTML = shoesData
   .map(getShoesAsHtml)
   .join("\n");
 
-function addToCart() {
-  alert("in function");
-  document.getElementById(`addtocart`).style.backgroundColor = `red`;
-  document.getElementById(`addtocart`).innerHTML = `Remove from Cart`;
-}
+//function addToCart() {
+// alert("in function");
+// document.getElementById(`addtocart`).style.backgroundColor = `red`;
+//document.getElementById(`addtocart`).innerHTML = `Remove from Cart`;
+//
 
-function addToWishlist() {
-  alert("in add to wishlist function");
-  document.getElementById(`heartBtn`).style.color = `red`;
-}
+//function addToWishlist() {
+// alert("in add to wishlist function");
+// document.getElementById(`heartBtn`).style.color = `red`;
+//}
 
 function sortPriceHighTolow() {
   alert("in high to low");
@@ -483,7 +483,7 @@ function sortPriceLowToHigh() {
   alert("in low to high");
   const PriceLowToHighArray = shoesData
     .slice(0)
-    .sort((a, b) => (a.price > b.price ? 1 : -1));
+    .sort((a, b) => (a.price > b.price ? 1 : -1));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   renderProducts(PriceLowToHighArray);
 }
 
@@ -502,13 +502,53 @@ function sortByRatings() {
     .sort((a, b) => (a.rating < b.rating ? 1 : -1));
   renderProducts(ratingArray);
 }
+const addToClickToHeartBtn = element => {
+  const addToWishlist = () => {
+    if (element.style.color != 'red') {
+      element.style.color = 'red';
+    } else {
+      element.style.color = 'rgb(63, 46, 46)'
+    };
+  }
+
+  element.addEventListener('click', addToWishlist)
+}
+
+const addToClickToCartBtn = element => {
+  const addTOCart = () => {
+    if (element.style.backgroundColor != `red` && element.innerHTML != `Remove from Cart`) {
+      element.style.backgroundColor = `red`;
+      element.innerHTML = `Remove from Cart`;
+    } else {
+      element.style.backgroundColor = `rgba(0, 0, 0, .87)`;
+      element.innerHTML = `Add to Cart`;
+    }
+
+  }
+  element.addEventListener('click', addTOCart)
+}
+
 
 function renderProducts(arr) {
   document.getElementById(`app`).innerHTML = arr.map(getShoesAsHtml).join("\n");
+  const heartBtn = document.querySelectorAll(`.heartBtn`);
+heartBtn.forEach(addToClickToHeartBtn);
+
+const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
+AddtoCartBtn.forEach(addToClickToCartBtn);
 }
+
+
+
+const heartBtn = document.querySelectorAll(`.heartBtn`);
+heartBtn.forEach(addToClickToHeartBtn);
+
+const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
+AddtoCartBtn.forEach(addToClickToCartBtn);
+
 //execution
-document.getElementById(`addtocart`).addEventListener("click", addToCart);
-document.getElementById(`heartBtn`).addEventListener("click", addToWishlist);
+//document.querySelectorAll(`addtocart`).addEventListener("click", addToCart);
+//document.querySelectorAll(`heartBtn`).addEventListener("click", addToWishlist);
 document
   .getElementById(`PriceHighToLow`)
   .addEventListener("click", sortPriceHighTolow);
@@ -521,3 +561,4 @@ document
 document.getElementById(`topRated`).addEventListener("click", sortByRatings);
 
 getShoesAsHtml(shoesData);
+
