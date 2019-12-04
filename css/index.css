@@ -130,10 +130,10 @@ font-family: 'Bebas Neue', cursive;*/
 
 .sidenav {
     background-color: rgba(0, 0, 0, .87);
-    padding: 1em;
-    margin: 0.5em;
+    padding: 2em;
+    margin: 1em 0 1em 2em;
     color: rgb(248, 255, 249);
-    height: 30%;
+    height: auto;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -196,3 +196,27 @@ font-family: 'Bebas Neue', cursive;*/
     color: rgb(202, 198, 197);
     font-size: 20px
 }
+
+
+
+
+/* For Mobiles */ 
+@media screen and (max-width:500px) {
+    
+  
+  }
+  
+  
+  /* For Tablets */
+  
+  @media screen and (max-width:927px) and (min-width:501px){
+      
+     
+  }
+  
+  /* For Desktop */
+  @media screen and (max-width:1128px) and (min-width:928px){
+      
+      
+  }
+  

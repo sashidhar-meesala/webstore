@@ -55,7 +55,7 @@
     <!-- Search the site -->
     <form class="search">
       <label>Search Products
-        <input type="search" name="find" id="find">
+        <input type="search" name="searchbar" id="find">
       </label>
       <button type="button"><span class="material-icons">search</span></button>
     </form>
@@ -69,20 +69,18 @@
         <li class="sortOptionsListItem">
           <h1 style=" font-family: 'Roboto Mono', monospace;">Sort By</h1>
         </li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceLowToHigh">Price Low to
-            High</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceHighToLow">Price High to
-            Low</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn"
-            id="availability">Availability</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button>
-        </li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceLowToHigh">Price Low to High</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceHighToLow">Price High to Low</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="availability">Availability</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button></li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="onSale">On Sale!</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="filter">Filter</button></li>
       </ul>
     </section>
+    <h2>Displaying Products: <small id="numResults"></small></h2>
     <section class="layoutTheme">
       <!-- Filtering product form -->
-      <article class="sidenav">
+      <article class="sidenav" id="filtermenu">
         <form>
           <h1 style="font-weight:bold;  font-family: 'Roboto Mono', monospace;">Filter By</h1>
           <hr>
