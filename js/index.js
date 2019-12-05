@@ -8,7 +8,7 @@ const nike1 = {
   rating: 4.1,
   brand: `Nike`,
   colors: [`red`, `blue`, `balck`],
-  stock: 0,
+  stock: 4,
   sizes: [6,7, 8, 9],
   discount: 10,
   onSale: true
@@ -270,7 +270,7 @@ const puma6 = {
   rating: 1,
   brand: `puma`,
   colors: [`red`, `blue`],
-  stock: 10,
+  stock: 0,
   sizes: [7, 8, 9],
   discount: 15,
   onSale: true
@@ -420,14 +420,13 @@ function getShoesAsHtml(shoesData) {
   let outOfStock=``;
   if(shoesData.onSale==true && shoesData.stock > 0){
     onsale=`<small class="onsale_banner">On Sale!</small>`;
+    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
+  
   }
   else{
     onsale=`<small class="outofstock">Out of stock</small>`
   }
 
-  if(shoesData.stock > 0){
-    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
-  }
   return `
     <section class="productsCard"> 
     <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
