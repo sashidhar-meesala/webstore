@@ -99,7 +99,7 @@ font-family: 'Bebas Neue', cursive;*/
     padding: 2rem;
     grid-row-gap: 0.6rem;
     grid-column-gap: 0.6rem;
-    align-items: start;
+    align-self: start;
 }
 
 .productsCard {
@@ -171,6 +171,19 @@ font-family: 'Bebas Neue', cursive;*/
     font-size: 25px;
     opacity: 0.7;
     color: rgb(63, 46, 46);
+}
+
+.onsale_banner{
+    position: absolute;
+    top: 1px;
+    left :0px;
+    text-align: center;
+    font-size: 16px;
+    color:white;
+    background: rgb(247, 116, 116);
+    padding: 0.12em;
+    transform: rotate(-45deg);
+    margin-top:1em;
 }
 
 .heartBtn:hover {

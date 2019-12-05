@@ -234,7 +234,7 @@ const puma3 = {
 const puma4 = {
   name: `puma shoes 4`,
   imageUrl: `img/puma/casual/puma-casual%20(4).jpeg`,
-  productCode: `PUMA103`,
+  productCode: 114,
   category: `casual`,
   price: `130`,
   rating: 2,
@@ -249,7 +249,7 @@ const puma4 = {
 const puma5 = {
   name: `puma shoes 5`,
   imageUrl: `img/puma/running/puma-running%20(1).jpeg`,
-  productCode: `PUMA104`,
+  productCode: 115,
   category: `running`,
   price: `140`,
   rating: 2,
@@ -264,7 +264,7 @@ const puma5 = {
 const puma6 = {
   name: `puma shoes 6`,
   imageUrl: `img/puma/running/puma-running%20(2).jpeg`,
-  productCode: `PUMA105`,
+  productCode: 116,
   category: `running`,
   price: `150`,
   rating: 1,
@@ -279,7 +279,7 @@ const puma6 = {
 const puma7 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/running/puma-running%20(3).jpeg`,
-  productCode: `PUMA106`,
+  productCode: 117,
   category: `running`,
   price: `160`,
   rating: 2,
@@ -294,7 +294,7 @@ const puma7 = {
 const puma8 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/running/puma-running%20(4).jpeg`,
-  productCode: `PUMA107`,
+  productCode: 118,
   category: `running`,
   price: `170`,
   rating: 2,
@@ -309,7 +309,7 @@ const puma8 = {
 const puma9 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/running/puma-running%20(4).jpeg`,
-  productCode: `PUMA108`,
+  productCode: 119,
   category: `running`,
   price: `180`,
   rating: 2,
@@ -324,7 +324,7 @@ const puma9 = {
 const puma10 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/running/puma-running%20(5).jpeg`,
-  productCode: `PUMA109`,
+  productCode: 120,
   category: `running`,
   price: `190`,
   rating: 2,
@@ -339,7 +339,7 @@ const puma10 = {
 const puma11 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/sports/puma-sports%20(1).jpeg`,
-  productCode: `PUMA110`,
+  productCode: 121,
   category: `sports`,
   price: `120`,
   rating: 2,
@@ -354,7 +354,7 @@ const puma11 = {
 const puma12 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/sports/puma-sports%20(2).jpeg`,
-  productCode: `PUMA111`,
+  productCode: 122,
   category: `sports`,
   price: `200`,
   rating: 2,
@@ -369,7 +369,7 @@ const puma12 = {
 const puma13 = {
   name: `puma shoes 7`,
   imageUrl: `img/puma/sports/puma-sports%20(3).jpeg`,
-  productCode: `PUMA110`,
+  productCode: 123,
   category: `sports`,
   price: `210`,
   rating: 2,
@@ -398,14 +398,34 @@ const puma = [
 
 const shoesData = nike.concat(puma);
 
+
+const shoppingCart = [
+  {ID: 101, qty: 1}
+];
+
+const wishlist=[
+  {
+    ID:100, qty:1}
+  ];
+
 //functions
+
+
+
+
 function getShoesAsHtml(shoesData) {
-  
+  const cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `
+  const heartButton=`<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`
+  let onsale='';
+  if(shoesData.onSale==true){
+    onsale=`<small class="onsale_banner">On Sale!</small>`;
+  }
   return `
     <section class="productsCard">
     <section class="container">
     <img clas="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
-    <button type="button" class="heartBtn" id="heartBtn"><span class="material-icons">favorite</span></button>
+    ${heartButton}
+    ${onsale}
     </section>
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
         <ul class="productCardList">
@@ -414,7 +434,7 @@ function getShoesAsHtml(shoesData) {
           <li class="productCardListItem"><p>Average rating: ${shoesData.rating}<p></li>
           <li>${shoesData.discount}</li>
         </ul>
-        <button type="button" class="productCardButton" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> 
+        ${cartBtn}
         </section>`;
 }
 
@@ -429,6 +449,58 @@ function LoadProductsByName(){
   const searchResultsArray=shoesData.filter(p=> p.name.toLowerCase().includes(lowerCase));
   renderProducts(searchResultsArray);
 }
+
+//addto cart function
+function handleClicksofBtns(){
+  if (event.target.matches('button.productCardButton')) {
+    const code = parseInt(event.target.dataset.code);
+    addItemToCart(code);
+  }
+
+  if (event.target.closest('button').matches('button.heartBtn')) {
+    const code = parseInt(event.target.dataset.code);
+      addToWishlist(code);
+  }
+  else{
+    if(!event.target.matches('button.heartBtn') && !event.target.matches('button.productCardButton')){
+      return;
+    }
+  
+  
+}}
+
+
+
+const addToWishlist = pID => {
+  // [ {courseid: 101, qty: 1} ]
+
+  const cartItem = wishlist.find(item => item.ID == pID);
+
+  if (cartItem) {  // if a cartItem was found
+    cartItem.qty++;
+    alert("An item has been added to wishlist ");
+  } else {
+    wishlist.push({ID: pID, qty: 1});
+    alert("New wishlist item has been added wishlist");
+  }
+}
+
+//add to wishlist
+
+const addItemToCart = pID => {
+  // [ {courseid: 101, qty: 1} ]
+
+  const cartItem = shoppingCart.find(item => item.ID == pID);
+
+  if (cartItem) {  // if a cartItem was found
+    cartItem.qty++;
+    alert("Another item has been added to your cart");
+  } else {
+    shoppingCart.push({ID: pID, qty: 1});
+    alert("A new item has been added to your cart");
+  }
+}
+
 
 
 function LoadFilterMenu(){
@@ -453,7 +525,7 @@ function LoadProductsBycolorFilter(){
   let category;
   let rating;
   let brand;
-  let disocunt;
+  let discount;
   arrayByCategory=[];
   arrayByRatings=[];
   arrayByBrand=[];
@@ -477,7 +549,7 @@ function LoadProductsBycolorFilter(){
 
   if(document.querySelector('input[name="brand"]:checked')!=null){
     brand=document.querySelector('input[name="brand"]:checked').value;
-    arrayByBrand=arrayByRatings.filter(p=>p.brand == brand);
+    arrayByBrand=arrayByRatings.filter(p=>p.brand.toLowerCase() == brand.toLowerCase());
   }
   else{
     arrayByBrand=arrayByRatings;
@@ -610,10 +682,10 @@ function renderProducts(arr) {
 //execution
 window.addEventListener('load', () => {
 
-const heartBtn = document.querySelectorAll(`.heartBtn`);
-heartBtn.forEach(addToClickToHeartBtn);
-const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
-AddtoCartBtn.forEach(addToClickToCartBtn);
+//const heartBtn = document.querySelectorAll(`.heartBtn`);
+//heartBtn.forEach(addToClickToHeartBtn);
+//const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
+//AddtoCartBtn.forEach(addToClickToCartBtn);
 document.getElementById(`find`).addEventListener("change",LoadProductsByName);
 document.getElementById(`PriceHighToLow`).addEventListener("click", LoadProductsPriceHighTolow);
 document.getElementById(`PriceLowToHigh`).addEventListener("click", LoadProductsPriceLowToHigh);
@@ -623,7 +695,7 @@ document.getElementById(`onSale`).addEventListener("click", LoadProductsOnSale);
 document.getElementById(`filter`).addEventListener("click", LoadFilterMenu);
 document.getElementById(`PriceFilter`).addEventListener("change",LoadProductsByPriceFilter);
 document.getElementById(`filterbtn`).addEventListener("click",LoadProductsBycolorFilter)
-
+document.getElementById('app').addEventListener("click", handleClicksofBtns);
 //start
 getShoesAsHtml(shoesData);
 
