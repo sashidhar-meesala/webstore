@@ -418,8 +418,11 @@ function getShoesAsHtml(shoesData) {
   let heartButton=`<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale='';
   let outOfStock=``;
-  if(shoesData.onSale==true){
+  if(shoesData.onSale==true && shoesData.stock > 0){
     onsale=`<small class="onsale_banner">On Sale!</small>`;
+  }
+  else{
+    onsale=`<small class="outofstock">Out of stock</small>`
   }
 
   if(shoesData.stock > 0){
@@ -427,7 +430,7 @@ function getShoesAsHtml(shoesData) {
   }
   return `
     <section class="productsCard"> 
-    <img clas="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
+    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
     ${heartButton}
     ${onsale}
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
@@ -475,13 +478,13 @@ function handleClicksofBtns(){
 
 
 const addToWishlist = pID => {
-  // [ {courseid: 101, qty: 1} ]
+ 
 
   const cartItem = wishlist.find(item => item.ID == pID);
 
   if (cartItem) {  // if a cartItem was found
     cartItem.qty++;
-    alert("An item has been added to wishlist ");
+    alert("Item has been already added to wishlist ");
   } else {
     wishlist.push({ID: pID, qty: 1});
     alert("New wishlist item has been added wishlist");
@@ -629,7 +632,7 @@ function LoadProductsByRatings() {
 
 function LoadProductsOnSale(){
   alert("in onsale function");
-  const onSaleArray= shoesData.slice(0).filter(p => p.onSale == true);
+  const onSaleArray= shoesData.slice(0).filter(p => p.onSale == true).filter(p=>p.stock>0);
   renderProducts(onSaleArray);
 }
 

@@ -113,7 +113,9 @@ font-family: 'Bebas Neue', cursive;*/
     position: relative;
    
 }
-
+img:hover{
+  background-color: aqua;
+}
 .ProductCardName {
     color: rgba(0, 0, 0, .87);
     font-family: 'Bebas Neue', cursive;
@@ -182,13 +184,27 @@ font-family: 'Bebas Neue', cursive;*/
     text-align: center;
     font-size: 16px;
     color:white;
-    background: rgb(247, 116, 116);
+    background: rgb(12, 12, 12);;
     padding: 0.12em;
     transform: rotate(-90deg);
     margin-top:1em;
     z-index:1;
 }
 
+.outofstock{
+    position: absolute;
+    top: 22px;
+    left :-40px;
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+    background: rgb(228, 10, 10);;
+    margin-top:1em;
+    transform: rotate(-90deg);
+    z-index:1;
+    width: 6em;
+    opacity: 0.7;
+}
 .heartBtn:hover {
     opacity: 1;
     color: rgb(216, 51, 51);
