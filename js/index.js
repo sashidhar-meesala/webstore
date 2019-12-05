@@ -8,7 +8,7 @@ const nike1 = {
   rating: 4.1,
   brand: `Nike`,
   colors: [`red`, `blue`, `balck`],
-  stock: 10,
+  stock: 0,
   sizes: [6,7, 8, 9],
   discount: 10,
   onSale: true
@@ -23,7 +23,7 @@ const nike2 = {
   rating: 3.2,
   brand: `Nike`,
   colors: [`red`, `balck`],
-  stock: 10,
+  stock: 0,
   sizes: [6,7, 8, 9],
   discount: 15,
   onSale: false
@@ -38,7 +38,7 @@ const nike3 = {
   rating: 3.8,
   brand: `Nike`,
   colors: [`red`, `blue`],
-  stock: 10,
+  stock: 0,
   sizes: [7, 8, 9,10],
   discount: 20,
   onSale: true
@@ -414,19 +414,22 @@ const wishlist=[
 
 
 function getShoesAsHtml(shoesData) {
-  const cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `
-  const heartButton=`<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`
+  let cartBtn=``;
+  let heartButton=`<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale='';
+  let outOfStock=``;
   if(shoesData.onSale==true){
     onsale=`<small class="onsale_banner">On Sale!</small>`;
   }
+
+  if(shoesData.stock > 0){
+    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
+  }
   return `
-    <section class="productsCard">
-    <section class="container">
+    <section class="productsCard"> 
     <img clas="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
     ${heartButton}
     ${onsale}
-    </section>
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
         <ul class="productCardList">
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
@@ -458,7 +461,7 @@ function handleClicksofBtns(){
   }
 
   if (event.target.closest('button').matches('button.heartBtn')) {
-    const code = parseInt(event.target.dataset.code);
+    const code = parseInt(event.target.closest('button').dataset.code);
       addToWishlist(code);
   }
   else{
