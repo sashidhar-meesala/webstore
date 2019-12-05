@@ -40,7 +40,7 @@ const nike3 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9,10],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 
@@ -56,7 +56,7 @@ const nike4 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: false
 };
 
@@ -72,7 +72,7 @@ const nike5 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 
@@ -104,7 +104,7 @@ const nike7 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: true
 };
 
@@ -120,7 +120,7 @@ const nike8 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: false
 };
 
@@ -134,9 +134,9 @@ const nike9 = {
   rating: 4.1,
   brand: `Nike`,
   colors: [`red`, `blue`],
-  stock: 10,
+  stock: 15,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: true
 };
 
@@ -152,7 +152,7 @@ const nike10 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: false
 };
 
@@ -168,7 +168,7 @@ const nike11 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: true
 };
 
@@ -197,7 +197,7 @@ const puma1 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9,10],
-  discount: 5,
+  discount: 10,
   onSale: true
 };
 
@@ -212,7 +212,7 @@ const puma2 = {
   colors: [`red`, `blue`],
   stock: 6,
   sizes:[8, 9],
-  discount: 5,
+  discount: 15,
   onSale: false
 };
 
@@ -227,7 +227,7 @@ const puma3 = {
   colors: [`red`, `blue`,'black'],
   stock: 112,
   sizes: [6,7, 8],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 
@@ -257,7 +257,7 @@ const puma5 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 25,
   onSale: false
 };
 
@@ -400,6 +400,7 @@ const shoesData = nike.concat(puma);
 
 //functions
 function getShoesAsHtml(shoesData) {
+  
   return `
     <section class="productsCard">
     <section class="container">
@@ -411,6 +412,7 @@ function getShoesAsHtml(shoesData) {
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
           <li class="productCardListItem"><h3>Price: $${shoesData.price}</h3></li>
           <li class="productCardListItem"><p>Average rating: ${shoesData.rating}<p></li>
+          <li>${shoesData.discount}</li>
         </ul>
         <button type="button" class="productCardButton" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> 
         </section>`;
@@ -428,6 +430,7 @@ function LoadProductsByName(){
   renderProducts(searchResultsArray);
 }
 
+
 function LoadFilterMenu(){
   const x = document.getElementById("filtermenu");
   if (x.style.display === "none") {
@@ -436,6 +439,88 @@ function LoadFilterMenu(){
     x.style.display = "none";
   }
 }
+//filter functions
+
+function LoadProductsByPriceFilter(){
+ const price=document.getElementById('PriceFilter').value;
+ const searchResultsArray=shoesData.filter(p=> p.price <= price);
+ renderProducts(searchResultsArray);
+}
+
+
+function LoadProductsBycolorFilter(){
+  //heirarchy category>rating >brand> colour > size >  discount 
+  let category;
+  let rating;
+  let brand;
+  let disocunt;
+  arrayByCategory=[];
+  arrayByRatings=[];
+  arrayByBrand=[];
+  arrayByDiscount=[];
+
+  if(document.querySelector('input[name="category"]:checked')!=null){
+    category=document.querySelector('input[name="category"]:checked').value;
+    alert(category);
+    arrayByCategory=shoesData.filter(p=>p.category==category);
+  }
+  else {
+    arrayByCategory=shoesData;
+  }
+  if(document.querySelector('input[name="rating"]:checked') != null){
+    rating=document.querySelector('input[name="rating"]:checked').value;
+    arrayByRatings=arrayByCategory.filter(p=>p.rating <= rating);
+  }
+  else{
+    arrayByRatings=arrayByCategory;
+  }
+
+  if(document.querySelector('input[name="brand"]:checked')!=null){
+    brand=document.querySelector('input[name="brand"]:checked').value;
+    arrayByBrand=arrayByRatings.filter(p=>p.brand == brand);
+  }
+  else{
+    arrayByBrand=arrayByRatings;
+  }
+
+  if(document.querySelector('input[name="discount"]:checked')!=null){
+    discount=document.querySelector('input[name="discount"]:checked').value;
+    arrayByDiscount=arrayByBrand.filter(p=>p.brand == brand);
+  }
+  else{
+    arrayByDiscount=arrayByBrand;
+  }
+
+  renderProducts(arrayByDiscount);
+  
+ 
+ let rating=document.querySelector('input[name="rating"]:checked').value;
+ let color=document.querySelector('input[name="colour"]:checked').value;
+let brand=document.querySelector('input[name="brand"]:checked').value;
+
+
+
+
+
+
+}
+
+
+function LoadProductsBySizeFilter(){
+
+}
+function LoadProductsByRatingsFilter(){
+
+}
+
+function LoadProductsByDiscountFilter(){
+
+}
+
+
+
+
+
 
 //sorting functions
 function LoadProductsPriceHighTolow() {
@@ -476,7 +561,6 @@ function LoadProductsOnSale(){
   renderProducts(onSaleArray);
 }
 
-//filter functions
 
 
 
@@ -540,6 +624,8 @@ document.getElementById(`availability`).addEventListener("click", LoadProductsBy
 document.getElementById(`topRated`).addEventListener("click", LoadProductsByRatings);
 document.getElementById(`onSale`).addEventListener("click", LoadProductsOnSale);
 document.getElementById(`filter`).addEventListener("click", LoadFilterMenu);
+document.getElementById(`PriceFilter`).addEventListener("change",LoadProductsByPriceFilter);
+document.getElementById(`filterbtn`).addEventListener("click",LoadProductsBycolorFilter)
 
 //start
 getShoesAsHtml(shoesData);

@@ -83,6 +83,21 @@
       <article class="sidenav" id="filtermenu">
         <form>
           <h1 style="font-weight:bold;  font-family: 'Roboto Mono', monospace;">Filter By</h1>
+          <button type="button" id="filterbtn">Apply Filters</button>
+          <hr>
+          <fieldset>
+            <legend>Price</legend>
+            <input type="text" name="PriceSearch" id="PriceFilter">
+          </fieldset>
+          <hr>
+          <fieldset>
+            <legend>Category</legend>
+            <ul>
+              <li><input type="radio" name="category" value="sports" id="sports">Sports</input></li>
+              <li><input type="radio" name="category" value="running" id="running">Running</input></li>
+              <li><input type="radio" name="category" value="sports" id="sports">Sports</input></li>
+            </ul>
+          </fieldset>
           <hr>
           <fieldset>
             <legend>Colour</legend>
@@ -147,12 +162,25 @@
           <fieldset>
             <legend>Discount</legend>
             <ul>
-              <li><input type="checkbox" name="discount" value="black" id="discount_ten"> <label for="ten">10%</label>
+            <li>
+              <input type="radio" name="discount" value="5" id="tenpercent">10%</input>
               </li>
-              <li><input type="checkbox" name="discount" value="white" id="discount_fifteen"> <label
-                  for="fifteen">15%</label></li>
-              <li><input type="checkbox" name="discount" value="grey" id="discount_twenty"> <label
-                  for="twenty">20%</label></li>
+              <li>
+                  <input type="radio" name="discount" value="15" id="fifteenpercent">15%</input>
+              </li>
+              <li>
+                  <input type="radio" name="discount" value="20" id="twentypercent">20%</input>
+             </li>
+            </ul>
+          </fieldset>
+          <hr>
+          <fieldset>
+            <legend>Brand</legend>
+            <ul>
+              <li><input type="radio" name="brand" value="nike" id="nike">Nike</input></li>
+              <li><input type="radio" name="brand" value="adidas" id="adidas">Adidas</input></li>
+              <li><input type="radio" name="brand" value="reebok" id="reebok">Reebok</input></li>
+              <li><input type="radio" name="brand" value="puma" id="puma">puma</input></li>
             </ul>
           </fieldset>
         </form>
