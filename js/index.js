@@ -88,7 +88,7 @@ const nike6 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: false
 };
 
@@ -120,7 +120,7 @@ const nike8 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 10,
+  discount: 20,
   onSale: false
 };
 
@@ -242,7 +242,7 @@ const puma4 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: true
 };
 
@@ -272,7 +272,7 @@ const puma6 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: true
 };
 
@@ -287,7 +287,7 @@ const puma7 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 
@@ -302,7 +302,7 @@ const puma8 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: false
 };
 
@@ -317,7 +317,7 @@ const puma9 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: false
 };
 
@@ -332,7 +332,7 @@ const puma10 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 15,
   onSale: false
 };
 
@@ -347,7 +347,7 @@ const puma11 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 
@@ -362,7 +362,7 @@ const puma12 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 10,
   onSale: true
 };
 
@@ -377,7 +377,7 @@ const puma13 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 5,
+  discount: 20,
   onSale: true
 };
 const puma = [
@@ -469,7 +469,7 @@ function LoadProductsBycolorFilter(){
   }
   if(document.querySelector('input[name="rating"]:checked') != null){
     rating=document.querySelector('input[name="rating"]:checked').value;
-    arrayByRatings=arrayByCategory.filter(p=>p.rating <= rating);
+    arrayByRatings=arrayByCategory.filter(p=>p.rating >= rating);
   }
   else{
     arrayByRatings=arrayByCategory;
@@ -485,7 +485,7 @@ function LoadProductsBycolorFilter(){
 
   if(document.querySelector('input[name="discount"]:checked')!=null){
     discount=document.querySelector('input[name="discount"]:checked').value;
-    arrayByDiscount=arrayByBrand.filter(p=>p.brand == brand);
+    arrayByDiscount=arrayByBrand.filter(p=>p.discount == discount);
   }
   else{
     arrayByDiscount=arrayByBrand;
@@ -493,10 +493,7 @@ function LoadProductsBycolorFilter(){
 
   renderProducts(arrayByDiscount);
   
- 
- let rating=document.querySelector('input[name="rating"]:checked').value;
- let color=document.querySelector('input[name="colour"]:checked').value;
-let brand=document.querySelector('input[name="brand"]:checked').value;
+
 
 
 
