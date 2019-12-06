@@ -438,6 +438,7 @@ function getShoesAsHtml(shoesData) {
           <li class="productCardListItem"><h3>Price: $${shoesData.price}</h3></li>
           <li class="productCardListItem"><p>Average rating: ${shoesData.rating}<p></li>
           <li>${shoesData.discount}</li>
+          <section class="onhoverShow">testing mee</section>
         </ul>
         ${cartBtn}
         </section>`;
@@ -448,7 +449,8 @@ document.getElementById(`app`).innerHTML = shoesData
   .join("\n");
 
   //search functionality
-function LoadProductsByName(){
+function LoadProductsByName(e){
+  e.preventDefault();
   const search=document.getElementById('find').value;
   const lowerCase=search.trim().toLowerCase();
   const searchResultsArray=shoesData.filter(p=> p.name.toLowerCase().includes(lowerCase));
@@ -525,7 +527,8 @@ function LoadProductsByPriceFilter(){
 }
 
 
-function LoadProductsBycolorFilter(){
+
+function LoadProductsByFilters(){
   //heirarchy category>rating >brand> colour > size >  discount 
   let category;
   let rating;
@@ -571,34 +574,12 @@ function LoadProductsBycolorFilter(){
   renderProducts(arrayByDiscount);
   
 
-
-
-
-
-
-
 }
-
-
-function LoadProductsBySizeFilter(){
-
-}
-function LoadProductsByRatingsFilter(){
-
-}
-
-function LoadProductsByDiscountFilter(){
-
-}
-
-
-
-
 
 
 //sorting functions
 function LoadProductsPriceHighTolow() {
-  alert("in high to low");
+  //alert("in high to low");
   const PriceHighToLowArray = shoesData
     .slice(0)
     .sort((a, b) => (a.price < b.price ? 1 : -1));
@@ -606,7 +587,7 @@ function LoadProductsPriceHighTolow() {
 }
 
 function LoadProductsPriceLowToHigh() {
-  alert("in low to high");
+  //alert("in low to high");
   const PriceLowToHighArray = shoesData
     .slice(0)
     .sort((a, b) => (a.price > b.price ? 1 : -1));
@@ -614,7 +595,7 @@ function LoadProductsPriceLowToHigh() {
 }
 
 function LoadProductsByAvailability() {
-  alert("in availability function");
+  //alert("in availability function");
   const availabilityArray = shoesData
     .slice(0)
     .sort((a, b) => (a.stock < b.stock ? 1 : -1));
@@ -622,7 +603,7 @@ function LoadProductsByAvailability() {
 }
 
 function LoadProductsByRatings() {
-  alert("in rating function");
+  //alert("in rating function");
   const ratingArray = shoesData
     .slice(0)
     .sort((a, b) => (a.rating < b.rating ? 1 : -1));
@@ -630,7 +611,7 @@ function LoadProductsByRatings() {
 }
 
 function LoadProductsOnSale(){
-  alert("in onsale function");
+  //alert("in onsale function");
   const onSaleArray= shoesData.slice(0).filter(p => p.onSale == true).filter(p=>p.stock>0);
   renderProducts(onSaleArray);
 }
@@ -638,7 +619,7 @@ function LoadProductsOnSale(){
 
 
 
-const addToClickToHeartBtn = element => {
+/*const addToClickToHeartBtn = element => {
   const addToWishlist = () => {
     if (element.style.color != 'red') {
       element.style.color = 'red';
@@ -662,22 +643,21 @@ const addToClickToCartBtn = element => {
 
   }
   element.addEventListener('click', addTOCart)
-}
+}*/
 
 
 function renderProducts(arr) {
   document.getElementById(`app`).innerHTML = arr.map(getShoesAsHtml).join("\n");
-  const heartBtn = document.querySelectorAll(`.heartBtn`);
-  heartBtn.forEach(addToClickToHeartBtn);
-  const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
-  AddtoCartBtn.forEach(addToClickToCartBtn);
   let res = 'Products';
   if (arr.length == 1) {
     res = 'Product'
+    document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
   }
-  //let res = (arr.length > 1) ? 'results' : 'result';
-
-  document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
+ if(arr.length==0){
+  res = 'Products'
+    document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
+    document.getElementById(`app`).innerHTML=`<h1>O RESULTS found!</h1>`
+ }
  
 }
 
@@ -699,8 +679,14 @@ document.getElementById(`topRated`).addEventListener("click", LoadProductsByRati
 document.getElementById(`onSale`).addEventListener("click", LoadProductsOnSale);
 document.getElementById(`filter`).addEventListener("click", LoadFilterMenu);
 document.getElementById(`PriceFilter`).addEventListener("change",LoadProductsByPriceFilter);
-document.getElementById(`filterbtn`).addEventListener("click",LoadProductsBycolorFilter)
+//filter button to be removed
+document.getElementById(`filterbtn`).addEventListener("click",LoadProductsByFilters)
 document.getElementById('app').addEventListener("click", handleClicksofBtns);
+document.querySelectorAll('[name="brand"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+document.querySelectorAll('[name="discount"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+document.querySelectorAll('[name="category"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+document.querySelectorAll('[name="rating"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+document.querySelectorAll('[name="size"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
 //start
 getShoesAsHtml(shoesData);
 

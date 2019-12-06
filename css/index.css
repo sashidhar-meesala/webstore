@@ -113,9 +113,24 @@ font-family: 'Bebas Neue', cursive;*/
     position: relative;
    
 }
-img:hover{
-  background-color: aqua;
+.productsCard{
+    display: block;
 }
+.productsCard:hover + .onhoverShow{
+    display: block;
+    color:red;
+    font-size:30px;
+}
+
+img:hover + .onhoverShow{
+  display: block;
+}
+
+.onhoverShow{
+    display: none;
+}
+
+
 .ProductCardName {
     color: rgba(0, 0, 0, .87);
     font-family: 'Bebas Neue', cursive;
