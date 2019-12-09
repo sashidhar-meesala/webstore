@@ -110,6 +110,9 @@ font-family: 'Bebas Neue', cursive;*/
     position: relative;
    
 }
+ .webbanner{
+     margin-left: 2em;
+ }
 
 .layoutthemex{
     grid-template-columns: 1fr 1r 1fr 1fr 1fr;
@@ -273,7 +276,9 @@ img:hover + .onhoverShow{
     .productsCard{
         width: 100%;
     }
-
+    .webbanner{
+        display: none;
+    }
     .footersection{
         grid-template-columns: 1fr;
         grid-row-gap: 1em;
@@ -304,6 +309,8 @@ img:hover + .onhoverShow{
 
     #filtermenu{
         display: none;
+        font-size: small;
+        margin-left: 3rem;
     }
 
     .search{
