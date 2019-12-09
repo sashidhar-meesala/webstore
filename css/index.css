@@ -80,12 +80,10 @@ font-family: 'Bebas Neue', cursive;*/
     cursor: pointer;
 }
 
-.sortOptionsBtn:hover {
-    font-family: 'Roboto Mono', monospace;
-    background-color: rgba(0, 0, 0, .87);
-    color: white;
-    border: 2px solid rgb(226, 223, 223);
+#filter{
+    display: none;
 }
+
 
 .layoutTheme {
     display: grid;
@@ -94,24 +92,31 @@ font-family: 'Bebas Neue', cursive;*/
 
 .products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     padding: 2rem;
     grid-row-gap: 0.6rem;
     grid-column-gap: 0.6rem;
-    align-self: start;
+    align-self:start;
 }
 
 .productsCard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    width: 225px;
     height: auto;
-    margin: auto;
+    margin: 0.5em;
     text-align: center;
     padding: 0.5rem;
     border: 1px solid rgba(0, 0, 0, .87);
     position: relative;
    
+}
+
+.layoutthemex{
+    grid-template-columns: 1fr 1r 1fr 1fr 1fr;
+}
+
+.productCardList{
+    padding: 1em;
 }
 .productsCard{
     display: block;
@@ -228,11 +233,11 @@ img:hover + .onhoverShow{
 .footersection {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
-    background-color: rgb(0, 0, 0, .87);
+    background-color: rgba(8, 8, 8, 0.87);
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1em;
+    grid-column-gap: 2em;
     padding: 1rem;
     text-align: center;
     font-size: 18px;
@@ -242,7 +247,12 @@ img:hover + .onhoverShow{
 .footermenulist {
     font-family: 'Baskervville', serif;
     color: rgb(202, 198, 197);
-    font-size: 20px
+    font-size: 20px;
+    
+}
+
+.footerarticle{
+    background-color: rgb(25, 26, 26);
 }
 
 
@@ -251,7 +261,71 @@ img:hover + .onhoverShow{
 /* For Mobiles */ 
 @media screen and (max-width:500px) {
     
-  
+    
+    .layoutTheme {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .products{
+        grid-template-columns: 1fr;
+    }
+
+    .productsCard{
+        width: 100%;
+    }
+
+    .footersection{
+        grid-template-columns: 1fr;
+        grid-row-gap: 1em;
+    }
+    
+    .searchResults{
+        text-align: center;
+        margin-top: 1em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .sortOptionsList .sortOptionsListItem {
+        display:inline;
+        padding:3px;
+    }
+    #find{
+        text-align: center;
+        width:150px;
+        margin-right: 3em;;
+    }
+    #find:focus {
+        width: 200px;
+    }
+
+    #filter{
+        display: inline;
+    }
+
+    #filtermenu{
+        display: none;
+    }
+
+    .search{
+        font-size: medium;
+    }
+
+    
+    .sortOptionsBtn:hover {
+        background-color: rgba(0, 0, 0, .87);
+        color: white;
+    }
+
+    .sortOptionsBtn{
+        font-size: small;
+    }
+
+    .sidenav{
+        width: 80%;
+        margin-right: 2em;;
+    }
+
   }
   
   
@@ -265,6 +339,12 @@ img:hover + .onhoverShow{
   /* For Desktop */
   @media screen and (max-width:1128px) and (min-width:928px){
       
+sortOptionsBtn:hover {
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(0, 0, 0, .87);
+    color: white;
+    border: 2px solid rgb(226, 223, 223);
+}
       
   }
   

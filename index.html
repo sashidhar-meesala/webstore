@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Document title]</title>
-  <meta name="description" content="[A short description]">
-  <meta name="author" content="[Your Name]">
+  <title>ShoeKart</title>
+  <meta name="description" content="E-commerce website selling shoes">
+  <meta name="author" content="Sashidhar Meesala">
   <link rel="stylesheet" href="css/reset.css"> <!-- You may change this "Reset" to "Normalize" if preferred -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css?family=Baskervville|Bebas+Neue|Roboto|Roboto+Mono&display=swap"
@@ -20,7 +20,11 @@
     <!-- Site logo, replace with your own -->
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><i class="fab fa-airbnb"></i></li>
+        <li><img 
+          src="img/shoekart_logo.svg" 
+          alt="shoeKart logo"
+          height="87"
+          width="100" /></li>
         <li class="main-nav-list-items"><a href="#">Home</a></li>
         <li class="main-nav-list-items"><a href="#">Products</a></li>
         <li class="main-nav-list-items"><a href="#">Explore</a></li>
@@ -53,9 +57,9 @@
     </nav>-->
 
     <!-- Search the site -->
-    <form class="search">
+    <form class="search" name="searchbar">
       <label>Search Products
-        <input type="search" name="searchbar" id="find">
+        <input type="search" name="searchbar" id="find" class="searchbar">
       </label>
     </form>
 
@@ -73,14 +77,16 @@
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="availability">Availability</button></li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button></li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="onSale">On Sale!</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="filter">Filter</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="filter"><i class="material-icons">
+          filter_list
+          </i></button></li>
       </ul>
     </section>
-    <h2>Displaying Products: <small id="numResults"></small></h2>
-    <section class="layoutTheme">
+    <h2 class="searchResults">Displaying Products: <small id="numResults"></small></h2>
+    <section class="layoutTheme" id="layoutTheme">
       <!-- Filtering product form -->
       <article class="sidenav" id="filtermenu">
-        <form>
+        <form name="filterform" class="filterclass">
           <h1 style="font-weight:bold;  font-family: 'Roboto Mono', monospace;">Custom Search:</h1>
           <button type="button" id="filterbtn">Apply Filters</button>
           <hr>
