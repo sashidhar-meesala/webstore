@@ -109,7 +109,7 @@ font-family: 'Bebas Neue', cursive;*/
    
 }
  .webbanner{
-     margin-left: 2em;
+     margin: 2rem;
  }
 
 .layoutthemex{
@@ -163,14 +163,11 @@ img:hover + .onhoverShow{
     font-family: 'Roboto Mono', monospace;
 }
 
-#filtermenu{
-    display: block
-}
-
 
 .price {
-    color: red;
+    color: rgb(240, 120, 50);
     font-size: 22px;
+    font-weight: bold;
 }
 
 .productsCard .productCardButton {
@@ -189,6 +186,17 @@ img:hover + .onhoverShow{
     position: relative;
     text-align: center;
     color: white;
+}
+
+
+
+.productCardList{
+    margin-top:0.8em;
+    margin-bottom: 0px;
+}
+
+.productCardListItem{
+    margin:0.2em;
 }
 
 .heartBtn {

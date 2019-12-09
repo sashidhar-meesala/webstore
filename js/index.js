@@ -425,6 +425,7 @@ function getShoesAsHtml(shoesData) {
   }
   else{
     onsale=`<small class="outofstock">Out of stock</small>`
+    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart" disabled style="background-color:rgba(78, 62, 62, 0.87)"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
   }
 
   return `
@@ -435,9 +436,9 @@ function getShoesAsHtml(shoesData) {
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
         <ul class="productCardList">
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
-          <li class="productCardListItem"><h3>Price: $${shoesData.price}</h3></li>
-          <li class="productCardListItem"><p>Average rating: ${shoesData.rating}<p></li>
-          <li>${shoesData.discount}</li>
+          <li class="productCardListItem"><h3 class="price">$${shoesData.price}</h3></li>
+          <li class="productCardListItem"><p>${shoesData.rating}<p></li>
+          <li class="productCardListItem">${shoesData.discount} % Off</li>
           <section class="onhoverShow">testing mee</section>
         </ul>
         ${cartBtn}
@@ -524,8 +525,8 @@ function LoadFilterMenu(){
 //filter functions
 
 function LoadProductsByPriceFilter(){
- const price=document.getElementById('PriceFilter').value;
- const searchResultsArray=shoesData.filter(p=> p.price <= price);
+ const budget=document.getElementById('PriceFilter').value;
+ const searchResultsArray=shoesData.filter(p=> p.price <= budget);
  renderProducts(searchResultsArray);
 }
 
@@ -541,6 +542,7 @@ function LoadProductsByFilters(){
   arrayByRatings=[];
   arrayByBrand=[];
   arrayByDiscount=[];
+  arrayBySize=[];
 
   if(document.querySelector('input[name="category"]:checked')!=null){
     category=document.querySelector('input[name="category"]:checked').value;
@@ -565,6 +567,8 @@ function LoadProductsByFilters(){
   else{
     arrayByBrand=arrayByRatings;
   }
+
+  
 
   if(document.querySelector('input[name="discount"]:checked')!=null){
     discount=document.querySelector('input[name="discount"]:checked').value;
