@@ -511,14 +511,15 @@ const addItemToCart = pID => {
 
 
 function LoadFilterMenu(){
-  const x = document.getElementById("filtermenu");
+  if(window.screen.width > 500){const x = document.getElementById("filtermenu");
   if (x.style.display === "block") {
     x.style.display = "none";
     
   } else {
     x.style.display = "block";
     //document.getElementById("layoutTheme").classList.toggle('layoutthemex');
-  }
+  }}
+  
 }
 //filter functions
 

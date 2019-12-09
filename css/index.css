@@ -80,9 +80,7 @@ font-family: 'Bebas Neue', cursive;*/
     cursor: pointer;
 }
 
-#filter{
-    display: none;
-}
+
 
 
 .layoutTheme {
@@ -161,8 +159,12 @@ img:hover + .onhoverShow{
     padding: 2em;
     margin: 1em 0 1em 2em;
     color: rgb(248, 255, 249);
-    height: auto;
+    height:auto;
     font-family: 'Roboto Mono', monospace;
+}
+
+#filtermenu{
+    display: block
 }
 
 
