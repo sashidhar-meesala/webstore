@@ -1,6 +1,18 @@
-//DATA
+// settings
+const settings = {
+  perpage: 10,
+  current: 1,
+  totalPages: 4
+
+}
+
+/**
+ * DATA 
+ * consists name,image url, product code, category of the product, price, brand, colors available, sizes, discount, 
+ * and onsale boolean.
+ */
 const nike1 = {
-  name: `Court majestic Sneakers`,
+  name: `Court majestic`,
   imageUrl: `img/nike/casual/nike-casual%20(1).jpeg`,
   productCode: 100,
   category: `casual`,
@@ -9,13 +21,13 @@ const nike1 = {
   brand: `Nike`,
   colors: [`red`, `blue`, `balck`],
   stock: 4,
-  sizes: [6,7, 8, 9],
+  sizes: [6, 7, 8, 9],
   discount: 10,
-  onSale: true
+  onSale: false
 };
 
 const nike2 = {
-  name: `Court Borough Low Shoe`,
+  name: `Court Borough`,
   imageUrl: `img/nike/casual/nike-casual%20(2).jpeg`,
   productCode: 101,
   category: `casual`,
@@ -24,13 +36,13 @@ const nike2 = {
   brand: `Nike`,
   colors: [`red`, `balck`],
   stock: 0,
-  sizes: [6,7, 8, 9],
+  sizes: [6, 7, 8, 9],
   discount: 15,
   onSale: false
 };
 
 const nike3 = {
-  name: `EBERNON LOW Casuals`,
+  name: `EBERNON LOW`,
   imageUrl: `img/nike/casual/nike-casual%20(3).jpeg`,
   productCode: 102,
   category: `casual`,
@@ -39,7 +51,7 @@ const nike3 = {
   brand: `Nike`,
   colors: [`red`, `blue`],
   stock: 0,
-  sizes: [7, 8, 9,10],
+  sizes: [7, 8, 9, 10],
   discount: 20,
   onSale: true
 };
@@ -72,7 +84,7 @@ const nike5 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 20,
+  discount: 10,
   onSale: true
 };
 
@@ -109,7 +121,7 @@ const nike7 = {
 };
 
 const nike8 = {
-  name: `Nike shoes `,
+  name: `EXPERIENCE Pro `,
   imageUrl: `img/nike/sports/nike-sports%20(1).jpeg`,
   productCode: 107,
   altname: `nikeshoe3`,
@@ -141,7 +153,7 @@ const nike9 = {
 };
 
 const nike10 = {
-  name: `Nike shoes `,
+  name: `Superstar XV`,
   imageUrl: `img/nike/sports/nike-sports%20(3).jpeg`,
   productCode: 109,
   altname: `nikeshoe3`,
@@ -196,7 +208,7 @@ const puma1 = {
   brand: `puma`,
   colors: [`red`, `blue`],
   stock: 10,
-  sizes: [7, 8, 9,10],
+  sizes: [7, 8, 9, 10],
   discount: 10,
   onSale: true
 };
@@ -211,7 +223,7 @@ const puma2 = {
   brand: `puma`,
   colors: [`red`, `blue`],
   stock: 6,
-  sizes:[8, 9],
+  sizes: [8, 9],
   discount: 15,
   onSale: false
 };
@@ -224,15 +236,15 @@ const puma3 = {
   price: `180`,
   rating: 3.7,
   brand: `puma`,
-  colors: [`red`, `blue`,'black'],
+  colors: [`red`, `blue`, 'black'],
   stock: 112,
-  sizes: [6,7, 8],
+  sizes: [6, 7, 8],
   discount: 20,
   onSale: true
 };
 
 const puma4 = {
-  name: `puma shoes 4`,
+  name: `puma Perfecto`,
   imageUrl: `img/puma/casual/puma-casual%20(4).jpeg`,
   productCode: 114,
   category: `casual`,
@@ -247,7 +259,7 @@ const puma4 = {
 };
 
 const puma5 = {
-  name: `puma shoes 5`,
+  name: `Puma Majestic`,
   imageUrl: `img/puma/running/puma-running%20(1).jpeg`,
   productCode: 115,
   category: `running`,
@@ -262,7 +274,7 @@ const puma5 = {
 };
 
 const puma6 = {
-  name: `puma shoes 6`,
+  name: `Puma Runner`,
   imageUrl: `img/puma/running/puma-running%20(2).jpeg`,
   productCode: 116,
   category: `running`,
@@ -277,7 +289,7 @@ const puma6 = {
 };
 
 const puma7 = {
-  name: `puma shoes 7`,
+  name: `Puma Accelerate`,
   imageUrl: `img/puma/running/puma-running%20(3).jpeg`,
   productCode: 117,
   category: `running`,
@@ -292,7 +304,7 @@ const puma7 = {
 };
 
 const puma8 = {
-  name: `puma shoes 7`,
+  name: `Puma Logic FLo`,
   imageUrl: `img/puma/running/puma-running%20(4).jpeg`,
   productCode: 118,
   category: `running`,
@@ -306,25 +318,11 @@ const puma8 = {
   onSale: false
 };
 
-const puma9 = {
-  name: `puma shoes 7`,
-  imageUrl: `img/puma/running/puma-running%20(4).jpeg`,
-  productCode: 119,
-  category: `running`,
-  price: `180`,
-  rating: 2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
-  stock: 10,
-  sizes: [7, 8, 9],
-  discount: 15,
-  onSale: false
-};
 
-const puma10 = {
-  name: `puma shoes 7`,
+const puma9 = {
+  name: `Puma Consistent 11`,
   imageUrl: `img/puma/running/puma-running%20(5).jpeg`,
-  productCode: 120,
+  productCode: 119,
   category: `running`,
   price: `190`,
   rating: 2,
@@ -336,10 +334,10 @@ const puma10 = {
   onSale: false
 };
 
-const puma11 = {
-  name: `puma shoes 7`,
+const puma10 = {
+  name: `Puma MagicX`,
   imageUrl: `img/puma/sports/puma-sports%20(1).jpeg`,
-  productCode: 121,
+  productCode: 120,
   category: `sports`,
   price: `120`,
   rating: 2,
@@ -351,10 +349,10 @@ const puma11 = {
   onSale: true
 };
 
-const puma12 = {
-  name: `puma shoes 7`,
+const puma11 = {
+  name: `Puma Sport2x`,
   imageUrl: `img/puma/sports/puma-sports%20(2).jpeg`,
-  productCode: 122,
+  productCode: 121,
   category: `sports`,
   price: `200`,
   rating: 2,
@@ -366,10 +364,10 @@ const puma12 = {
   onSale: true
 };
 
-const puma13 = {
-  name: `puma shoes 7`,
+const puma12 = {
+  name: `Puma Sport CA`,
   imageUrl: `img/puma/sports/puma-sports%20(3).jpeg`,
-  productCode: 123,
+  productCode: 122,
   category: `sports`,
   price: `210`,
   rating: 2,
@@ -392,55 +390,255 @@ const puma = [
   puma9,
   puma10,
   puma11,
-  puma12,
-  puma13
+  puma12
 ];
 
-const shoesData = nike.concat(puma);
+const adidas1={
+  name: `Adidas Casuals`,
+  imageUrl: `img/adidas/casual/adidas-casual%20(1).jpeg`,
+  productCode: 122,
+  category: `sports`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
 
 
-const shoppingCart = [
-  {ID: 101, qty: 1}
+const adidas2={
+  name: `Adidas Casuals`,
+  imageUrl: `img/adidas/casual/adidas-casual%20(2).jpeg`,
+  productCode: 122,
+  category: `casual`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas3={
+  name: `Adidas Casuals`,
+  imageUrl: `img/adidas/casual/adidas-casual%20(3).jpeg`,
+  productCode: 122,
+  category: `casual`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas4={
+  name: `Adidas Casuals`,
+  imageUrl: `img/adidas/casual/adidas-casual%20(4).jpeg`,
+  productCode: 122,
+  category: `casual`,
+  price: `210`,
+  rating: 2,
+  brand: `puma`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+const adidas5={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/running/adidas-running%20(1).jpeg`,
+  productCode: 122,
+  category: `ruuning`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+const adidas6={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/running/adidas-running%20(2).jpeg`,
+  productCode: 122,
+  category: `running`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+
+const adidas7={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/running/adidas-running%20(3).jpeg`,
+  productCode: 122,
+  category: `running`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas8={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/running/adidas-running%20(4).jpeg`,
+  productCode: 122,
+  category: `running`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas9={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/sports/adidas-sports%20(1).jpeg`,
+  productCode: 122,
+  category: `sports`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+
+const adidas10={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/sports/adidas-sports%20(2).jpeg`,
+  productCode: 122,
+  category: `sports`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas11={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/sports/adidas-sports%20(3).jpeg`,
+  productCode: 122,
+  category: `sports`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+
+const adidas12={
+  name: `Adidas runner`,
+  imageUrl: `img/adidas/sports/adidas-sports%20(4).jpeg`,
+  productCode: 122,
+  category: `sports`,
+  price: `210`,
+  rating: 2,
+  brand: `adidas`,
+  colors: [`red`, `blue`],
+  stock: 10,
+  sizes: [7, 8, 9],
+  discount: 20,
+  onSale: true
+};
+
+const adidas=[
+  adidas1,adidas2,adidas3,adidas4,adidas5,adidas6,adidas7,adidas8,adidas9,adidas10,adidas11,adidas12
 ];
 
-const wishlist=[
-  {
-    ID:100, qty:1}
-  ];
+const shoesData = nike.concat(puma).concat(adidas);
+
+
+const shoppingCart = [{
+  ID: 101,
+  qty: 1
+}];
+
+const wishlist = [{
+  ID: 100,
+  qty: 1
+}];
+
+
 
 //functions
 
 
 
+/*function :getShoesAsHtml
+parameter: js object 
+working : This function takes the js data object and returns the dynamic content embedded into application.*/
 
 function getShoesAsHtml(shoesData) {
-  let cartBtn=``;
-  let heartButton=`<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
-  let onsale='';
-  let outOfStock=``;
-  if(shoesData.onSale==true && shoesData.stock > 0){
-    onsale=`<small class="onsale_banner">On Sale!</small>`;
-    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
-  
-  }
-  else{
-    onsale=`<small class="outofstock">Out of stock</small>`
-    cartBtn=`<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart" disabled style="background-color:rgba(78, 62, 62, 0.87)"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
+
+  let cartBtn = ``;
+  let heartButton = `<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
+  let onsale = '';
+  let outOfStock = ``;
+  if (shoesData.onSale == true && shoesData.stock > 0) {
+    onsale = `<small class="onsale_banner">On Sale!</small>`;
+    cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
+
+  } else {
+    onsale = `<small class="outofstock">Out of stock</small>`
+    cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart" disabled style="background-color:rgba(78, 62, 62, 0.87)"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
   }
 
   return `
-    <section class="productsCard"> 
-    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;">
+    <section class="productsCard" id="pCard"> 
+    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;" id="${shoesData.productCode}">
     ${heartButton}
     ${onsale}
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
-        <ul class="productCardList">
+        <ul class="productCardList" id="productCardList">
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
           <li class="productCardListItem"><h3 class="price">$${shoesData.price}</h3></li>
-          <li class="productCardListItem"><p>${shoesData.rating}<p></li>
+          <li class="productCardListItem"><h4>Rating:${shoesData.rating}<h4></li>
           <li class="productCardListItem">${shoesData.discount} % Off</li>
-          <section class="onhoverShow">testing mee</section>
         </ul>
+          <section id="onhoverShow" style="display: none">testing mee</section>
         ${cartBtn}
         </section>`;
 }
@@ -449,17 +647,29 @@ document.getElementById(`app`).innerHTML = shoesData
   .map(getShoesAsHtml)
   .join("\n");
 
-  //search functionality
-function LoadProductsByName(e){
+
+
+function showDetails(){
+document.getElementById('onhoverShow').style.display="block";
+}
+
+/*search functionality
+Function:LoadProductsByName
+this function takes the user input from text and matches the name of the product with that of the user's input 
+passes the array to renderproducts function where it renders the filtered data onto the page  */
+
+function LoadProductsByName(e) {
   e.preventDefault();
-  const search=document.getElementById('find').value;
-  const lowerCase=search.trim().toLowerCase();
-  const searchResultsArray=shoesData.filter(p=> p.name.toLowerCase().includes(lowerCase));
+  const search = document.getElementById('find').value;
+  const lowerCase = search.trim().toLowerCase();
+  const searchResultsArray = shoesData.filter(p => p.name.toLowerCase().includes(lowerCase));
   renderProducts(searchResultsArray);
 }
 
-//addto cart function
-function handleClicksofBtns(){
+/*Function HandleClickofBtns
+This function checks for the click and matches the nearest button class 
+and sends the target dataset to different functions */
+function handleClicksofBtns() {
   if (event.target.matches('button.productCardButton')) {
     const code = parseInt(event.target.dataset.code);
     addItemToCart(code);
@@ -467,124 +677,164 @@ function handleClicksofBtns(){
 
   if (event.target.closest('button').matches('button.heartBtn')) {
     const code = parseInt(event.target.closest('button').dataset.code);
-      addToWishlist(code);
-  }
-  else{
-    if(!event.target.matches('button.heartBtn') && !event.target.matches('button.productCardButton')){
+    addToWishlist(code);
+  } else {
+    if (!event.target.matches('button.heartBtn') && !event.target.matches('button.productCardButton')) {
       return;
     }
-  
-  
-}}
 
 
+  }
+}
 
+
+//FUNCTION: addToWishlist
+//PARAMETER :dataset - productid of the product
+// this function checks whether the product is present in wishlist if not present it adds to wishlist 
+//if already present it removes from the wishlist
 const addToWishlist = pID => {
- 
+
 
   const cartItem = wishlist.find(item => item.ID == pID);
 
-  if (cartItem) {  // if a cartItem was found
+  if (cartItem) { // if a cartItem was found
     cartItem.qty++;
-    alert("Item has been already added to wishlist ");
+    alert("Item has been removed from wishlist");
   } else {
-    wishlist.push({ID: pID, qty: 1});
+    wishlist.push({
+      ID: pID,
+      qty: 1
+    });
     alert("New wishlist item has been added wishlist");
   }
 }
 
-//add to wishlist
+//FUNCTION: addItemToCart
+//PARAMETER :dataset - productid of the product
+// this function checks whether the product is present in shoppingcart if not present it adds to shoppingcart 
+//if already present, it increments the quantity of the product in the shoppingcart.
 
 const addItemToCart = pID => {
   // [ {courseid: 101, qty: 1} ]
 
   const cartItem = shoppingCart.find(item => item.ID == pID);
 
-  if (cartItem) {  // if a cartItem was found
+  if (cartItem) { // if a cartItem was found
     cartItem.qty++;
     alert("Another item has been added to your cart");
   } else {
-    shoppingCart.push({ID: pID, qty: 1});
+    shoppingCart.push({
+      ID: pID,
+      qty: 1
+    });
     alert("A new item has been added to your cart");
   }
 }
 
+//Function:LoadFilterMenu
+//Paramenters:none
+//usage: It works on click of filter button , to toggle the display of the filter menu.
+function ToggleFilterMenu() {
+  const filtermenu = document.getElementById("filtermenu");
+  if (filtermenu.style.display === "") {
+    filtermenu.style.display = "none";
+  } 
+  
+  else  {
+    filtermenu.style.display = "";
+  }
 
-
-function LoadFilterMenu(){
-  if(window.screen.width > 500){const x = document.getElementById("filtermenu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    
-  } else {
-    x.style.display = "block";
-    //document.getElementById("layoutTheme").classList.toggle('layoutthemex');
-  }}
   
 }
-//filter functions
 
-function LoadProductsByPriceFilter(){
- const budget=document.getElementById('PriceFilter').value;
- const searchResultsArray=shoesData.filter(p=> p.price <= budget);
- renderProducts(searchResultsArray);
+
+//FILTERFUNCTIONS
+
+//Function:LoadProductsByPriceFilter
+//usage: on entering the price in the "whats your budget" field, the function stores the user input and displays,
+//filtered data from shoesdata with prices less than or equal to the budget of the customer.
+function LoadProductsByPriceFilter() {
+  const budget = document.getElementById('PriceFilter').value;
+  const searchResultsArray = shoesData.filter(p => p.price <= budget);
+  renderProducts(searchResultsArray);
 }
 
 
-
-function LoadProductsByFilters(){
-  //heirarchy category>rating >brand> colour > size >  discount 
+/**
+ * Function:LoadProductsByFilters
+ * This functions stores all the selected filters from the filtermenu and filters the data
+ * with the heirarchy category>rating >brand> size > colour >  discount 
+ */
+function LoadProductsByFilters() {
   let category;
   let rating;
   let brand;
   let discount;
-  arrayByCategory=[];
-  arrayByRatings=[];
-  arrayByBrand=[];
-  arrayByDiscount=[];
-  arrayBySize=[];
+  let sizeArray = [];
+  arrayByCategory = [];
+  arrayByRatings = [];
+  arrayByBrand = [];
+  arrayByDiscount = [];
+  arrayBySize = [];
 
-  if(document.querySelector('input[name="category"]:checked')!=null){
-    category=document.querySelector('input[name="category"]:checked').value;
+
+  /*let chks = document.querySelectorAll('[name="size"]:checked');
+  //alert(chks);
+  let checked = [];
+  for (let i = 0; i < chks.length; i++) {
+    if (chks[i].checked) {
+      checked.push(parseInt(chks[i].value))
+    }
+  }
+  alert(checked);
+  let sizes = [];
+*/
+
+  // alert(shoesData.filter(element => checked.includes(element)))
+
+  if (document.querySelector('input[name="category"]:checked') != null) {
+    category = document.querySelector('input[name="category"]:checked').value;
     alert(category);
-    arrayByCategory=shoesData.filter(p=>p.category==category);
+    arrayByCategory = shoesData.filter(p => p.category == category);
+  } else {
+    arrayByCategory = shoesData;
   }
-  else {
-    arrayByCategory=shoesData;
-  }
-  if(document.querySelector('input[name="rating"]:checked') != null){
-    rating=document.querySelector('input[name="rating"]:checked').value;
-    arrayByRatings=arrayByCategory.filter(p=>p.rating >= rating);
-  }
-  else{
-    arrayByRatings=arrayByCategory;
+  if (document.querySelector('input[name="rating"]:checked') != null) {
+    rating = document.querySelector('input[name="rating"]:checked').value;
+    arrayByRatings = arrayByCategory.filter(p => p.rating >= rating);
+  } else {
+    arrayByRatings = arrayByCategory;
   }
 
-  if(document.querySelector('input[name="brand"]:checked')!=null){
-    brand=document.querySelector('input[name="brand"]:checked').value;
-    arrayByBrand=arrayByRatings.filter(p=>p.brand.toLowerCase() == brand.toLowerCase());
-  }
-  else{
-    arrayByBrand=arrayByRatings;
+  if (document.querySelector('input[name="brand"]:checked') != null) {
+    brand = document.querySelector('input[name="brand"]:checked').value;
+    arrayByBrand = arrayByRatings.filter(p => p.brand.toLowerCase() == brand.toLowerCase());
+  } else {
+    arrayByBrand = arrayByRatings;
   }
 
-  
 
-  if(document.querySelector('input[name="discount"]:checked')!=null){
-    discount=document.querySelector('input[name="discount"]:checked').value;
-    arrayByDiscount=arrayByBrand.filter(p=>p.discount == discount);
-  }
-  else{
-    arrayByDiscount=arrayByBrand;
+  if (document.querySelector('input[name="discount"]:checked') != null) {
+    discount = document.querySelector('input[name="discount"]:checked').value;
+    arrayByDiscount = arrayByBrand.filter(p => p.discount == discount);
+  } else {
+    arrayByDiscount = arrayByBrand;
   }
 
   renderProducts(arrayByDiscount);
-  
+
 
 }
 
 
-//sorting functions
+//sorting functions START
+
+/**
+ * FUNCTION : LoadProductsPriceHighTolow
+ * this function on click of sort button- price high to low
+ * sorts the shoesdata considering the prices key from high to low, stores in an array
+ *  and passes it to renderproducts function
+ */
 function LoadProductsPriceHighTolow() {
   //alert("in high to low");
   const PriceHighToLowArray = shoesData
@@ -592,6 +842,13 @@ function LoadProductsPriceHighTolow() {
     .sort((a, b) => (a.price < b.price ? 1 : -1));
   renderProducts(PriceHighToLowArray);
 }
+
+/**
+ * FUNCTION : LoadProductsPriceLowToHigh
+ * this function on click of sort button- price low to high
+ * sorts the shoesdata considering the prices key from low to high, stores in an array
+ *  and passes it to renderproducts function
+ */
 
 function LoadProductsPriceLowToHigh() {
   //alert("in low to high");
@@ -601,6 +858,14 @@ function LoadProductsPriceLowToHigh() {
   renderProducts(PriceLowToHighArray);
 }
 
+
+/**
+ * FUNCTION : LoadProductsByAvailability
+ * this function on click of sort button- by availability
+ * sorts the shoesdata considering the availability key from high to low, stores in an array
+ *  and passes it to renderproducts function
+ */
+
 function LoadProductsByAvailability() {
   //alert("in availability function");
   const availabilityArray = shoesData
@@ -609,6 +874,12 @@ function LoadProductsByAvailability() {
   renderProducts(availabilityArray);
 }
 
+/**
+ * FUNCTION : LoadProductsByRatings
+ * this function on click of sort button- by Ratings
+ * sorts the shoesdata considering the ratings key from high to low, stores in an array
+ *  and passes it to renderproducts function
+ */
 function LoadProductsByRatings() {
   //alert("in rating function");
   const ratingArray = shoesData
@@ -617,9 +888,16 @@ function LoadProductsByRatings() {
   renderProducts(ratingArray);
 }
 
-function LoadProductsOnSale(){
+/**
+ * FUNCTION : LoadProductsOnSale
+ * this function on click of sort button- on sale
+ * filters the shoesdata considering whether the product is on sale or not, stores in an array if its on sale
+ *  and passes it to renderproducts function
+ */
+
+function LoadProductsOnSale() {
   //alert("in onsale function");
-  const onSaleArray= shoesData.slice(0).filter(p => p.onSale == true).filter(p=>p.stock>0);
+  const onSaleArray = shoesData.slice(0).filter(p => p.onSale == true).filter(p => p.stock > 0);
   renderProducts(onSaleArray);
 }
 
@@ -652,7 +930,12 @@ const addToClickToCartBtn = element => {
   element.addEventListener('click', addTOCart)
 }*/
 
-
+/**
+ * Function:renderProducts
+ * Parameter: Array
+ * this functions recieves the array consisting the dynamic data which is to be rendered on the page 
+ * by mapping the array to getShoesAsHtml function.
+ */
 function renderProducts(arr) {
   document.getElementById(`app`).innerHTML = arr.map(getShoesAsHtml).join("\n");
   let res = 'Products';
@@ -660,12 +943,12 @@ function renderProducts(arr) {
     res = 'Product'
     document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
   }
- if(arr.length==0){
-  res = 'Products'
+  if (arr.length == 0) {
+    res = 'Products'
     document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
-    document.getElementById(`app`).innerHTML=`<h1>O RESULTS found!</h1>`
- }
- 
+    document.getElementById(`app`).innerHTML = `<h1>O RESULTS found!</h1>`
+  }
+
 }
 
 
@@ -673,28 +956,24 @@ function renderProducts(arr) {
 
 //execution
 window.addEventListener('load', () => {
+  document.getElementById( `productCardList`).addEventListener("onmouseover",showDetails);
+  document.getElementById(`find`).addEventListener("change", LoadProductsByName);
+  document.getElementById(`PriceHighToLow`).addEventListener("click", LoadProductsPriceHighTolow);
+  document.getElementById(`PriceLowToHigh`).addEventListener("click", LoadProductsPriceLowToHigh);
+  document.getElementById(`availability`).addEventListener("click", LoadProductsByAvailability);
+  document.getElementById(`topRated`).addEventListener("click", LoadProductsByRatings);
+  document.getElementById(`onSale`).addEventListener("click", LoadProductsOnSale);
+  document.getElementById(`filter`).addEventListener("click", ToggleFilterMenu);
+  document.getElementById(`PriceFilter`).addEventListener("change", LoadProductsByPriceFilter);
+  document.getElementById('app').addEventListener("click", handleClicksofBtns);
+  document.querySelectorAll('[name="brand"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.querySelectorAll('[name="discount"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.querySelectorAll('[name="category"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.querySelectorAll('[name="rating"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.querySelectorAll('[name="size"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
 
-//const heartBtn = document.querySelectorAll(`.heartBtn`);
-//heartBtn.forEach(addToClickToHeartBtn);
-//const AddtoCartBtn = document.querySelectorAll(`.productCardButton`);
-//AddtoCartBtn.forEach(addToClickToCartBtn);
-document.getElementById(`find`).addEventListener("change",LoadProductsByName);
-document.getElementById(`PriceHighToLow`).addEventListener("click", LoadProductsPriceHighTolow);
-document.getElementById(`PriceLowToHigh`).addEventListener("click", LoadProductsPriceLowToHigh);
-document.getElementById(`availability`).addEventListener("click", LoadProductsByAvailability);
-document.getElementById(`topRated`).addEventListener("click", LoadProductsByRatings);
-document.getElementById(`onSale`).addEventListener("click", LoadProductsOnSale);
-document.getElementById(`filter`).addEventListener("click", LoadFilterMenu);
-document.getElementById(`PriceFilter`).addEventListener("change",LoadProductsByPriceFilter);
-//filter button to be removed
-document.getElementById(`filterbtn`).addEventListener("click",LoadProductsByFilters)
-document.getElementById('app').addEventListener("click", handleClicksofBtns);
-document.querySelectorAll('[name="brand"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
-document.querySelectorAll('[name="discount"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
-document.querySelectorAll('[name="category"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
-document.querySelectorAll('[name="rating"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
-document.querySelectorAll('[name="size"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
-//start
-getShoesAsHtml(shoesData);
+
+  //start
+  getShoesAsHtml(shoesData);
 
 });
