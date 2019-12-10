@@ -3,25 +3,44 @@ font-family: 'Baskervville', serif;
 font-family: 'Roboto Mono', monospace;
 font-family: 'Bebas Neue', cursive;*/
 
-.main-nav-list {
+/**/
+.main-nav{
+    background: linear-gradient(to right, #131314,#080b13);
+    color:#fff;
+    margin-bottom: 2em;
+    width: 100% !important;
+  }
+  
+  
+  .main-nav-list ul {
     list-style-type: none;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .87);
-}
-
-.main-nav-list-items {
-    float: left;
-}
-
-.main-nav-list-items a {
+  }
+  
+  .main-nav-list li {
+    display: inline-block;
+    padding:0.5rem;
+    font-size: 1rem;
+    
+  }
+  
+  li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 16px;
     text-decoration: none;
-}
+  }
+  
+  .main-nav-list li a:hover {
+    background-color:rgb(241, 232, 232);
+    color:black;
+    border-radius: 18px;
+  }
+/**/
+
 
 .search {
     text-align: center;
@@ -91,7 +110,7 @@ font-family: 'Bebas Neue', cursive;*/
 
 .products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 2rem;
     grid-row-gap: 0.6rem;
     grid-column-gap: 0.6rem;
@@ -388,8 +407,11 @@ img:hover+.onhoverShow {
 
 /* For Desktop */
 @media screen and (max-width:1128px) and (min-width:928px) {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
-    sortOptionsBtn:hover {
+    .sortOptionsBtn:hover {
         font-family: 'Roboto Mono', monospace;
         background-color: rgba(0, 0, 0, .87);
         color: white;
