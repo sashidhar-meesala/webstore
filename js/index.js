@@ -19,7 +19,7 @@ const nike1 = {
   price: `120`,
   rating: 4.1,
   brand: `Nike`,
-  colors: [`red`, `blue`, `balck`],
+  colors: [`red`, `blue`, `black`],
   stock: 4,
   sizes: [6, 7],
   discount: 10,
@@ -34,7 +34,7 @@ const nike2 = {
   price: `100`,
   rating: 3.2,
   brand: `Nike`,
-  colors: [`red`, `balck`],
+  colors: [`red`, `black`],
   stock: 0,
   sizes: [ 8, 9],
   discount: 15,
@@ -612,11 +612,16 @@ parameter: js object
 working : This function takes the js data object and returns the dynamic content embedded into application.*/
 
 function getShoesAsHtml(shoesData) {
+  let color='';
+  for(let i=0; i<shoesData.colors.length; i++)
+  {
+    color +=`<li class="color-box" style="background-color:${shoesData.colors[i]}"><span class="colour-span"></span></p>`;
+  }
 
+    
   let cartBtn = ``;
   let heartButton = `<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale = '';
-  let outOfStock = ``;
   if (shoesData.onSale == true && shoesData.stock > 0) {
     onsale = `<small class="onsale_banner">On Sale!</small>`;
     cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
@@ -638,8 +643,9 @@ function getShoesAsHtml(shoesData) {
           <li class="productCardListItem"><h3 class="price">$${shoesData.price}</h3></li>
           <li class="productCardListItem"><h4>${shoesData.rating}<span class="fa fa-star checked"><h4></li>
           <li class="productCardListItem">${shoesData.discount} % Off</li>
+          <p>Available colors</p>
+          <ul class="color-div">${color}</ul>
         </ul>
-          <section id="onhoverShow" style="display: none">testing mee</section>
         ${cartBtn}
         </section>`;
 }

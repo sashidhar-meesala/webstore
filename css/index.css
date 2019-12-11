@@ -228,7 +228,18 @@ img:hover+.onhoverShow {
     font-size: 22px;
     font-weight: bold;
 }
+.color-div .color-box {
+    display: inline-block;
+}
 
+.color-box{
+    margin-right:0.5em;
+}
+
+.colour-span{
+    padding:0 0.5em 0 0.5em;
+    border: 1.5px solid rgb(66, 63, 17);
+}
 .checked{
     color:rgb(245, 122, 51);
 }
