@@ -3,7 +3,8 @@ font-family: 'Baskervville', serif;
 font-family: 'Roboto Mono', monospace;
 font-family: 'Bebas Neue', cursive;*/
 
-/**/
+/*styling for navbar
+*/
 .main-nav{
     background: linear-gradient(to right, #131314,#080b13);
     color:#fff;
@@ -34,6 +35,9 @@ font-family: 'Bebas Neue', cursive;*/
     text-decoration: none;
   }
   
+  .main-nav-list-itemsx{
+    margin-left: 6.2em;
+}
   .searchResults{
       text-align: center;
       margin-left:4em;
@@ -42,10 +46,8 @@ font-family: 'Bebas Neue', cursive;*/
       color: #e98b1f;  
   }
    
-  .main-nav-list-itemsx{
-      margin-left: 6.2em;
-  }
-/**/
+  
+/*styling for cart*/
 .cart 
 {
     color: rgb(8, 0, 0);
@@ -63,7 +65,7 @@ font-family: 'Bebas Neue', cursive;*/
     transform: scaleY(1);
 }*/
 
-
+/*styling for wishlist*/
 .Wishlist 
 {
     color: rgb(8, 0, 0);
@@ -74,12 +76,16 @@ font-family: 'Bebas Neue', cursive;*/
     border-radius: 16px;
     border:3px solid rgb(209, 198, 198);
 }
+
+/*styling for search label*/
 .search {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-size: 26px;
 }
 
+
+/*styling for searchbar*/
 .searchbar {
     font-family: 'Baskervville', serif;
     text-align: center;
@@ -100,6 +106,7 @@ font-family: 'Bebas Neue', cursive;*/
     width: 450px;
 }
 
+/*styling for sort buttons, list */
 .sortOptionsList {
     list-style-type: none;
     text-align: center;
@@ -134,14 +141,14 @@ font-family: 'Bebas Neue', cursive;*/
 
 
 
-
+/*styling for grid layout*/
 .layoutTheme {
     display: grid;
     grid-template-columns: 0.2fr 0.8fr;
     max-width: 110em;
 }
 
-
+/*styling for products grid*/
 .products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -151,6 +158,7 @@ font-family: 'Bebas Neue', cursive;*/
     align-self: start;
 }
 
+/*styling for product card*/
 .productsCard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 225px;
@@ -163,19 +171,11 @@ font-family: 'Bebas Neue', cursive;*/
 
 }
 
-.brand{
-    color: #e98b1f;
-    font-weight: bold;
-    font-size: 19px;
+.productCardImg{
+    height: 120px;
+    width: 100%;
 }
 
-.webbanner {
-    margin: 2rem;
-}
-
-.layoutthemex {
-    grid-template-columns: 1fr 1r 1fr 1fr 1fr;
-}
 
 .productCardList {
     padding: 1em;
@@ -190,15 +190,6 @@ font-family: 'Bebas Neue', cursive;*/
     color: red;
     font-size: 30px;
 }
-
-img:hover+.onhoverShow {
-    display: block;
-}
-
-.onhoverShow {
-    display: none;
-}
-
 
 .ProductCardName {
     color: rgba(0, 0, 0, .87);
@@ -217,6 +208,32 @@ img:hover+.onhoverShow {
 
 }
 
+
+.productsCard .productCardButton {
+    border: none;
+    outline: 0;
+    padding: 0.4rem;
+    color: rgb(250, 249, 249);
+    background-color: rgba(0, 0, 0, .87);
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+}
+
+
+/*styling for brand inner html form js*/
+.brand{
+    color: #e98b1f;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/*styling for web banner*/
+.webbanner {
+    margin: 2rem;
+}
+
 .sidenav {
     background-color: rgb(0, 0, 0, .87);
     padding: 2em;
@@ -226,12 +243,14 @@ img:hover+.onhoverShow {
     font-family: 'Roboto Mono', monospace;
 }
 
-
+/*styling for price inner html*/
 .price {
     color: rgb(245, 122, 51);
     font-size: 22px;
     font-weight: bold;
 }
+
+/*styling for color boxes inner html*/
 .color-div .color-box {
     display: inline-block;
 }
@@ -248,37 +267,13 @@ img:hover+.onhoverShow {
     color:rgb(245, 122, 51);
 }
 
-.productsCard .productCardButton {
-    border: none;
-    outline: 0;
-    padding: 0.4rem;
-    color: rgb(250, 249, 249);
-    background-color: rgba(0, 0, 0, .87);
-    text-align: center;
-    cursor: pointer;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-}
 
+/* css fro container to place heart button , out of stock , on sale banners on product card*/
 .container {
     position: relative;
     text-align: center;
     color: white;
 }
-.disabled-cart:hover{
-    cursor:not-allowed;
-}
-    
-
-.productCardList {
-    margin-top: 0.8em;
-    margin-bottom: 0px;
-}
-
-.productCardListItem {
-    margin: 0.2em;
-}
-
 .heartBtn {
     position: absolute;
     top: 0px;
@@ -326,6 +321,8 @@ img:hover+.onhoverShow {
     color: rgb(216, 51, 51);
 }
 
+
+/*CSS for footer section , footer list items*/
 .footersection {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
@@ -454,6 +451,7 @@ img:hover+.onhoverShow {
 
     .sidenav {
         margin-left: 3em;
+        margin-top:2em;
     }
 
     
@@ -471,7 +469,7 @@ img:hover+.onhoverShow {
 @media screen and (max-width:927px) and (min-width:501px) {
 
     .main-nav-list-itemsx{
-        margin-left: 6px;
+        margin-left: 0.3em;
     }
     .products {
         grid-template-columns: 1fr 1fr;
