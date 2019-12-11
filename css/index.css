@@ -80,7 +80,7 @@ font-family: 'Bebas Neue', cursive;*/
     font-size: 26px;
 }
 
-#find {
+.searchbar {
     font-family: 'Baskervville', serif;
     text-align: center;
     margin-left: 4em;
@@ -96,7 +96,7 @@ font-family: 'Bebas Neue', cursive;*/
     transition: width 0.4s ease-in-out;
 }
 
-#find:focus {
+.searchbar:focus {
     width: 450px;
 }
 
@@ -329,7 +329,7 @@ img:hover+.onhoverShow {
 .footersection {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
     color: rgb(255, 248, 248);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
