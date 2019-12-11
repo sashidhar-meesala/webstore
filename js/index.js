@@ -369,7 +369,7 @@ const puma12 = {
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: truek2
+  onSale: true
 };
 const puma = [
   puma1,
