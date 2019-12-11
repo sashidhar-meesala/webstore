@@ -387,13 +387,13 @@ const puma = [
 ];
 
 const adidas1={
-  name: `Adidas Casuals`,
+  name: `Adidas  XVR`,
   imageUrl: `img/adidas/casual/adidas-casual%20(1).jpeg`,
   productCode: 122,
-  category: `sports`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
+  category: `casual`,
+  price: `159.99`,
+  rating: 3.8,
+  brand: `Adidas`,
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
@@ -403,46 +403,46 @@ const adidas1={
 
 
 const adidas2={
-  name: `Adidas Casuals`,
+  name: `Adidas Zoomx`,
   imageUrl: `img/adidas/casual/adidas-casual%20(2).jpeg`,
-  productCode: 122,
-  category: `casual`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  productCode: 123,
+  category: `Aasual`,
+  price: `188.79`,
+  rating: 3.9,
+  brand: `Adidas`,
+  colors: [`black`, `green`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: true
+  onSale: false
 };
 
 
 const adidas3={
-  name: `Adidas Casuals`,
+  name: `Adidas Casual TN`,
   imageUrl: `img/adidas/casual/adidas-casual%20(3).jpeg`,
-  productCode: 122,
+  productCode: 124,
   category: `casual`,
   price: `210`,
-  rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  rating: 5,
+  brand: `Adidas`,
+  colors: [`white`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: true
+  onSale: false
 };
 
 
 const adidas4={
   name: `Adidas Casuals`,
   imageUrl: `img/adidas/casual/adidas-casual%20(4).jpeg`,
-  productCode: 122,
+  productCode: 125,
   category: `casual`,
   price: `210`,
   rating: 2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
+  brand: `Adidas`,
+  colors: [`white`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
@@ -450,14 +450,14 @@ const adidas4={
 };
 
 const adidas5={
-  name: `Adidas runner`,
+  name: `Adidas runner XS`,
   imageUrl: `img/adidas/running/adidas-running%20(1).jpeg`,
-  productCode: 122,
-  category: `ruuning`,
+  productCode: 126,
+  category: `running`,
   price: `210`,
   rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  brand: `Adidas`,
+  colors: [`white`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
@@ -465,13 +465,13 @@ const adidas5={
 };
 
 const adidas6={
-  name: `Adidas runner`,
+  name: `Adidas runner XR`,
   imageUrl: `img/adidas/running/adidas-running%20(2).jpeg`,
-  productCode: 122,
+  productCode: 127,
   category: `running`,
   price: `210`,
   rating: 2,
-  brand: `adidas`,
+  brand: `Adidas`,
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
@@ -482,13 +482,13 @@ const adidas6={
 
 
 const adidas7={
-  name: `Adidas runner`,
+  name: `Adidas runner BZ`,
   imageUrl: `img/adidas/running/adidas-running%20(3).jpeg`,
-  productCode: 122,
+  productCode: 128,
   category: `running`,
   price: `210`,
   rating: 2,
-  brand: `adidas`,
+  brand: `Adidas`,
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
@@ -498,83 +498,83 @@ const adidas7={
 
 
 const adidas8={
-  name: `Adidas runner`,
+  name: `Adidas runner VZ`,
   imageUrl: `img/adidas/running/adidas-running%20(4).jpeg`,
-  productCode: 122,
+  productCode: 129,
   category: `running`,
   price: `210`,
   rating: 2,
-  brand: `adidas`,
+  brand: `Adidas`,
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 20,
+  discount: 15,
   onSale: true
 };
 
 
 const adidas9={
-  name: `Adidas runner`,
+  name: `Adidas Sport pro`,
   imageUrl: `img/adidas/sports/adidas-sports%20(1).jpeg`,
-  productCode: 122,
+  productCode: 130,
   category: `sports`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  price: `199`,
+  rating: 3.7,
+  brand: `Adidas`,
+  colors: [`red`, `white`],
   stock: 10,
-  sizes: [7, 8, 9],
-  discount: 20,
+  sizes: [7, 8],
+  discount: 10,
   onSale: true
 };
 
 
 
 const adidas10={
-  name: `Adidas runner`,
+  name: `Adidas sport x`,
   imageUrl: `img/adidas/sports/adidas-sports%20(2).jpeg`,
-  productCode: 122,
+  productCode: 131,
   category: `sports`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
+  price: `189`,
+  rating: 3.6,
+  brand: `Adidas`,
   colors: [`red`, `blue`],
   stock: 10,
-  sizes: [7, 8, 9],
+  sizes: [7, 8],
   discount: 20,
   onSale: true
 };
 
 
 const adidas11={
-  name: `Adidas runner`,
+  name: `Adidas sport max`,
   imageUrl: `img/adidas/sports/adidas-sports%20(3).jpeg`,
-  productCode: 122,
+  productCode: 132,
   category: `sports`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  price: `130`,
+  rating: 4.1,
+  brand: `Adidas`,
+  colors: [`white`, `green`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: true
+  onSale: false
 };
 
 
 const adidas12={
-  name: `Adidas runner`,
+  name: `Adidas sport zs`,
   imageUrl: `img/adidas/sports/adidas-sports%20(4).jpeg`,
-  productCode: 122,
+  productCode: 133,
   category: `sports`,
-  price: `210`,
-  rating: 2,
-  brand: `adidas`,
-  colors: [`red`, `blue`],
+  price: `120`,
+  rating: 3.1,
+  brand: `Adidas`,
+  colors: [`red`, `blue`,`black`],
   stock: 10,
-  sizes: [7, 8, 9],
-  discount: 20,
-  onSale: true
+  sizes:  [8, 9],
+  discount: 10,
+  onSale: false
 };
 
 const adidas=[
