@@ -41,7 +41,10 @@ font-family: 'Bebas Neue', cursive;*/
       font-weight: bold;
       color: #e98b1f;
   }
- 
+   
+  .main-nav-list-itemsx{
+      margin-left: 6.2em;
+  }
 /**/
 .cart 
 {
@@ -451,6 +454,9 @@ img:hover+.onhoverShow {
     .main-nav{
         width:100%;
     }
+    .main-nav-list-itemsx{
+        margin-left: 6px;
+    }
     .products {
         grid-template-columns: 1fr 1fr;
     }
@@ -485,6 +491,10 @@ img:hover+.onhoverShow {
         background-color: rgba(0, 0, 0, .87);
         color: white;
         border: 2px solid rgb(226, 223, 223);
+    }
+
+    .main-nav-list-itemsx{
+        margin-left: 2em;
     }
 
 }
