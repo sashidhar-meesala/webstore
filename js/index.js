@@ -631,7 +631,7 @@ function getShoesAsHtml(shoesData) {
 
   return `
     <section class="productsCard" id="pCard"> 
-    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:150px;" id="${shoesData.productCode}">
+    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:200px,height:110px;" id="${shoesData.productCode}">
     ${heartButton}
     ${onsale}
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
