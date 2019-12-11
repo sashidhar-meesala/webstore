@@ -196,10 +196,10 @@ const puma1 = {
   imageUrl: `img/puma/casual/puma-casual%20(1).jpeg`,
   productCode: 111,
   category: `casual`,
-  price: `210`,
-  rating: 2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
+  price: `150`,
+  rating: 3.3,
+  brand: `Puma`,
+  colors: [`white`, `green`],
   stock: 10,
   sizes: [7, 8, 9, 10],
   discount: 10,
@@ -211,11 +211,11 @@ const puma2 = {
   imageUrl: `img/puma/casual/puma-casual%20(2).jpeg`,
   productCode: 112,
   category: `casual`,
-  price: `110`,
+  price: `80`,
   rating: 4.2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
-  stock: 6,
+  brand: `Puma`,
+  colors: ['black' ,`blue`],
+  stock: 0,
   sizes: [8, 9],
   discount: 15,
   onSale: false
@@ -228,11 +228,11 @@ const puma3 = {
   category: `casual`,
   price: `180`,
   rating: 3.7,
-  brand: `puma`,
+  brand: `Puma`,
   colors: [`red`, `blue`, 'black'],
-  stock: 112,
+  stock: 12,
   sizes: [6, 7, 8],
-  discount: 20,
+  discount: 10,
   onSale: true
 };
 
@@ -241,14 +241,14 @@ const puma4 = {
   imageUrl: `img/puma/casual/puma-casual%20(4).jpeg`,
   productCode: 114,
   category: `casual`,
-  price: `130`,
-  rating: 2,
+  price: `129.99`,
+  rating: 4.7,
   brand: `puma`,
   colors: [`red`, `blue`],
   stock: 10,
-  sizes: [7, 8, 9],
+  sizes: [7, 8],
   discount: 10,
-  onSale: true
+  onSale: false
 };
 
 const puma5 = {
@@ -257,12 +257,12 @@ const puma5 = {
   productCode: 115,
   category: `running`,
   price: `140`,
-  rating: 2,
-  brand: `puma`,
+  rating: 4.5,
+  brand: `Puma`,
   colors: [`red`, `blue`],
-  stock: 10,
-  sizes: [7, 8, 9],
-  discount: 25,
+  stock: 22,
+  sizes: [ 8, 9],
+  discount: 20,
   onSale: false
 };
 
@@ -273,12 +273,12 @@ const puma6 = {
   category: `running`,
   price: `150`,
   rating: 1,
-  brand: `puma`,
-  colors: [`red`, `blue`],
-  stock: 0,
+  brand: `Puma`,
+  colors: [`white`, `blue`],
+  stock: 11,
   sizes: [7, 8, 9],
-  discount: 15,
-  onSale: true
+  discount: 10,
+  onSale: false
 };
 
 const puma7 = {
@@ -290,10 +290,10 @@ const puma7 = {
   rating: 2,
   brand: `puma`,
   colors: [`red`, `blue`],
-  stock: 10,
+  stock: 0,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: true
+  onSale: false
 };
 
 const puma8 = {
@@ -301,12 +301,12 @@ const puma8 = {
   imageUrl: `img/puma/running/puma-running%20(4).jpeg`,
   productCode: 118,
   category: `running`,
-  price: `170`,
-  rating: 2,
+  price: `159.99`,
+  rating: 5,
   brand: `puma`,
-  colors: [`red`, `blue`],
+  colors: [`blue`,`green`,`black`],
   stock: 10,
-  sizes: [7, 8, 9],
+  sizes: [ 8, 9],
   discount: 10,
   onSale: false
 };
@@ -318,11 +318,11 @@ const puma9 = {
   productCode: 119,
   category: `running`,
   price: `190`,
-  rating: 2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
-  stock: 10,
-  sizes: [7, 8, 9],
+  rating:3.9,
+  brand: `Puma`,
+  colors: [`green`, `blue`],
+  stock: 0,
+  sizes: [7, 9],
   discount: 15,
   onSale: false
 };
@@ -332,10 +332,10 @@ const puma10 = {
   imageUrl: `img/puma/sports/puma-sports%20(1).jpeg`,
   productCode: 120,
   category: `sports`,
-  price: `120`,
-  rating: 2,
+  price: `200`,
+  rating: 1,
   brand: `puma`,
-  colors: [`red`, `blue`],
+  colors: [`blue`, `white`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
@@ -348,9 +348,9 @@ const puma11 = {
   productCode: 121,
   category: `sports`,
   price: `200`,
-  rating: 2,
+  rating: 4.2,
   brand: `puma`,
-  colors: [`red`, `blue`],
+  colors: [`red`, `blue`,`black`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 10,
@@ -364,12 +364,12 @@ const puma12 = {
   category: `sports`,
   price: `210`,
   rating: 2,
-  brand: `puma`,
-  colors: [`red`, `blue`],
+  brand: `Puma`,
+  colors: [`black`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 20,
-  onSale: true
+  onSale: truek2
 };
 const puma = [
   puma1,
