@@ -636,7 +636,7 @@ function getShoesAsHtml(shoesData) {
         <ul class="productCardList" id="productCardList">
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
           <li class="productCardListItem"><h3 class="price">$${shoesData.price}</h3></li>
-          <li class="productCardListItem"><h4>Rating:${shoesData.rating}<h4></li>
+          <li class="productCardListItem"><h4>${shoesData.rating}<span class="fa fa-star checked"><h4></li>
           <li class="productCardListItem">${shoesData.discount} % Off</li>
         </ul>
           <section id="onhoverShow" style="display: none">testing mee</section>

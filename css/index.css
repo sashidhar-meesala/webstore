@@ -229,6 +229,10 @@ img:hover+.onhoverShow {
     font-weight: bold;
 }
 
+.checked{
+    color:rgb(245, 122, 51);
+}
+
 .productsCard .productCardButton {
     border: none;
     outline: 0;
