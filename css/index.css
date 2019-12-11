@@ -326,7 +326,7 @@ img:hover+.onhoverShow {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
     background-color: rgba(8, 8, 8, 0.87);
-    color: white;
+    color: rgb(255, 248, 248);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 2em;
@@ -338,13 +338,15 @@ img:hover+.onhoverShow {
 
 .footermenulist {
     font-family: 'Baskervville', serif;
-    color: rgb(202, 198, 197);
+    color: rgb(221, 161, 32);
     font-size: 20px;
+    padding: 0.6em;
 
 }
 
 .footerarticle {
-    background-color: rgb(25, 26, 26);
+    background-color: rgba(255, 255, 255, 0.089);
+    padding:0.8em 0 0.8em 0;
 }
 
 

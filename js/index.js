@@ -616,9 +616,7 @@ function getShoesAsHtml(shoesData) {
   for(let i=0; i<shoesData.colors.length; i++)
   {
     color +=`<li class="color-box" style="background-color:${shoesData.colors[i]}"><span class="colour-span"></span></p>`;
-  }
-
-    
+  }  
   let cartBtn = ``;
   let heartButton = `<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale = '';
@@ -630,7 +628,7 @@ function getShoesAsHtml(shoesData) {
     onsale = `<small class="outofstock">Out of stock</small>`
     cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart" disabled style="background-color:rgba(78, 62, 62, 0.87)"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
   }
-  document.getElementById('numResults').innerHTML = `(${shoesData.length} Products)`;
+
   return `
     <section class="productsCard" id="pCard"> 
     <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:150px;" id="${shoesData.productCode}">
@@ -648,17 +646,15 @@ function getShoesAsHtml(shoesData) {
         </ul>
         ${cartBtn}
         </section>`;
+       
 }
 
 document.getElementById(`app`).innerHTML = shoesData
   .map(getShoesAsHtml)
   .join("\n");
+  document.getElementById('numResults').innerHTML = `(${shoesData.length} Products)`;
 
 
-
-function showDetails(){
-document.getElementById('onhoverShow').style.display="block";
-}
 
 /*search functionality
 Function:LoadProductsByName
@@ -975,7 +971,6 @@ function renderProducts(arr) {
 
 //execution
 window.addEventListener('load', () => {
-  document.getElementById( `productCardList`).addEventListener("onmouseover",showDetails);
   document.getElementById(`find`).addEventListener("change", LoadProductsByName);
   document.getElementById(`PriceHighToLow`).addEventListener("click", LoadProductsPriceHighTolow);
   document.getElementById(`PriceLowToHigh`).addEventListener("click", LoadProductsPriceLowToHigh);
