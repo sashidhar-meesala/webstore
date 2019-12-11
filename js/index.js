@@ -16,9 +16,9 @@ const nike1 = {
   imageUrl: `img/nike/casual/nike-casual%20(1).jpeg`,
   productCode: 100,
   category: `casual`,
-  price: `120`,
+  price: `120.99`,
   rating: 4.1,
-  brand: `Nike`,
+  brand: `nike`,
   colors: [`red`, `blue`, `black`],
   stock: 4,
   sizes: [6, 7],
@@ -31,10 +31,10 @@ const nike2 = {
   imageUrl: `img/nike/casual/nike-casual%20(2).jpeg`,
   productCode: 101,
   category: `casual`,
-  price: `100`,
+  price: `100.99`,
   rating: 3.2,
   brand: `Nike`,
-  colors: [`red`, `black`],
+  colors: [`red`, `black`,`green`],
   stock: 0,
   sizes: [ 8, 9],
   discount: 15,
@@ -46,14 +46,14 @@ const nike3 = {
   imageUrl: `img/nike/casual/nike-casual%20(3).jpeg`,
   productCode: 102,
   category: `casual`,
-  price: `140`,
+  price: `140.99`,
   rating: 3.8,
   brand: `Nike`,
   colors: [`red`, `blue`],
-  stock: 0,
-  sizes: [ 8, 9],
+  stock: 6,
+  sizes: [ 6, 9,10],
   discount: 20,
-  onSale: true
+  onSale: false
 };
 
 const nike4 = {
@@ -68,7 +68,7 @@ const nike4 = {
   colors: [`red`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 15,
+  discount: 10,
   onSale: false
 };
 
@@ -76,30 +76,28 @@ const nike5 = {
   name: `TANJUN Running`,
   imageUrl: `img/nike/running/nike-running%20(1).jpeg`,
   productCode: 104,
-  altname: `nikeshoe3`,
   category: `running`,
-  price: `180`,
-  rating: 2.5,
+  price: `180.99`,
+  rating: 3.5,
   brand: `Nike`,
-  colors: [`red`, `blue`],
+  colors: [`green`, `blue`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 10,
-  onSale: true
+  discount: 15,
+  onSale: false
 };
 
 const nike6 = {
   name: `Revolution 4 pro `,
   imageUrl: `img/nike/running/nike-running%20(2).jpeg`,
   productCode: 105,
-  altname: `nikeshoe3`,
   category: `running`,
-  price: `200`,
+  price: `189.99`,
   rating: 5,
   brand: `Nike`,
-  colors: [`red`, `blue`],
+  colors: [`green`, `blue`],
   stock: 10,
-  sizes: [7, 8, 9],
+  sizes: [6, 8],
   discount: 10,
   onSale: false
 };
@@ -108,31 +106,29 @@ const nike7 = {
   name: `FLEX EXPERIENCE`,
   imageUrl: `img/nike/running/nike-running%20(3).jpeg`,
   productCode: 106,
-  altname: `nikeshoe3`,
   category: `running`,
-  price: `110`,
+  price: `119.99`,
   rating: 5,
   brand: `nike`,
-  colors: [`red`, `blue`],
+  colors: [`black`],
   stock: 10,
-  sizes: [7, 8, 9],
-  discount: 15,
+  sizes: [9,10],
+  discount: 20,
   onSale: true
 };
 
 const nike8 = {
-  name: `EXPERIENCE Pro `,
+  name: `EXPERIENCE Pro`,
   imageUrl: `img/nike/sports/nike-sports%20(1).jpeg`,
   productCode: 107,
-  altname: `nikeshoe3`,
   category: `sports`,
-  price: `210`,
-  rating: 3.1,
+  price: `209.99`,
+  rating: 4.8,
   brand: `Nike`,
-  colors: [`red`, `blue`],
+  colors: [`blue`,`white`],
   stock: 10,
   sizes: [7, 8, 9],
-  discount: 20,
+  discount: 15,
   onSale: false
 };
 
@@ -140,15 +136,14 @@ const nike9 = {
   name: `ZOOM WINFLO 5`,
   imageUrl: `img/nike/sports/nike-sports%20(2).jpeg`,
   productCode: 108,
-  altname: `nikeshoe3`,
   category: `sports`,
-  price: `190`,
-  rating: 4.1,
+  price: `199.99`,
+  rating: 4.3,
   brand: `Nike`,
-  colors: [`red`, `blue`],
+  colors: [`white`, `blue`,`green`],
   stock: 15,
-  sizes: [7, 8, 9],
-  discount: 10,
+  sizes: [ 7, 9],
+  discount: 20,
   onSale: true
 };
 
@@ -156,12 +151,11 @@ const nike10 = {
   name: `Superstar XV`,
   imageUrl: `img/nike/sports/nike-sports%20(3).jpeg`,
   productCode: 109,
-  altname: `nikeshoe3`,
   category: `sports`,
-  price: `220`,
-  rating: 4.1,
+  price: `133.45`,
+  rating: 2.9,
   brand: `Nike`,
-  colors: [`red`, `blue`],
+  colors: [`white`, `green`,`red`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 10,
@@ -172,14 +166,13 @@ const nike11 = {
   name: `FLY.BY LOW II `,
   imageUrl: `img/nike/sports/nike-sports%20(4).jpeg`,
   productCode: 110,
-  altname: `nikeshoe3`,
   category: `sports`,
-  price: `170`,
-  rating: 4.1,
+  price: `170.99`,
+  rating: 3.6,
   brand: `Nike`,
   colors: [`red`, `blue`],
   stock: 10,
-  sizes: [7, 8, 9],
+  sizes: [7, 9],
   discount: 15,
   onSale: true
 };
@@ -620,8 +613,15 @@ function getShoesAsHtml(shoesData) {
   let cartBtn = ``;
   let heartButton = `<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale = '';
-  if (shoesData.onSale == true && shoesData.stock > 0) {
+  if (shoesData.onSale == true){
     onsale = `<small class="onsale_banner">On Sale!</small>`;
+  }
+  else{
+    onsale=``;
+  }
+  
+  if(shoesData.stock > 0) {
+    
     cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
 
   } else {
