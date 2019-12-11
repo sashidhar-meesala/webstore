@@ -11,7 +11,7 @@ font-family: 'Bebas Neue', cursive;*/
     width: 100% !important;
   }
   
-  
+ 
   .main-nav-list ul {
     list-style-type: none;
     margin-bottom: 1rem;;
@@ -34,14 +34,110 @@ font-family: 'Bebas Neue', cursive;*/
     text-decoration: none;
   }
   
-  .main-nav-list li a:hover {
-    background-color:rgb(241, 232, 232);
-    color:black;
-    border-radius: 18px;
+  .searchResults{
+      text-align: center;
+      margin-left:4em;
+      font-size: 20px;
+      font-weight: bold;
+      color: #e98b1f;
   }
+ 
 /**/
+.cart 
+{
+    color: rgb(8, 0, 0);
+    font-size: 16px;
+    background-color: rgb(243, 150, 28);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 16px;
+    border:3px solid rgb(209, 198, 198);
+}
+/*.cart-box {
+    background-color: white; color: black; box-shadow: 0 0 0.5em inset rgba(0,0,0,0.8); overflow: hidden; transform: scaleY(0); transition: transform 0.3s;
+}
+.cart-box.open {
+    transform: scaleY(1);
+}*/
+
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
 
 
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+
+.Wishlist 
+{
+    color: rgb(8, 0, 0);
+    font-size: 16px;
+    background-color: rgb(243, 150, 28);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 16px;
+    border:3px solid rgb(209, 198, 198);
+}
 .search {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -105,6 +201,7 @@ font-family: 'Bebas Neue', cursive;*/
 .layoutTheme {
     display: grid;
     grid-template-columns: 0.2fr 0.8fr;
+    max-width: 110em;
 }
 
 
@@ -127,6 +224,12 @@ font-family: 'Bebas Neue', cursive;*/
     border: 1px solid rgba(0, 0, 0, .87);
     position: relative;
 
+}
+
+.brand{
+    color: #e98b1f;
+    font-weight: bold;
+    font-size: 19px;
 }
 
 .webbanner {
@@ -210,8 +313,10 @@ img:hover+.onhoverShow {
     text-align: center;
     color: white;
 }
-
-
+.disabled-cart:hover{
+    cursor:not-allowed;
+}
+    
 
 .productCardList {
     margin-top: 0.8em;
@@ -300,7 +405,17 @@ img:hover+.onhoverShow {
 /* For Mobiles */
 @media screen and (max-width:500px) {
 
-
+    .main-nav-list li {
+        display: inline;
+        margin: 0;
+    }
+    .li a{
+        display: inline;
+        margin:0;
+    }
+    .logo{
+       margin-left:35vw;
+    }
     .layoutTheme {
         grid-template-columns: 1fr;
     }
@@ -322,22 +437,24 @@ img:hover+.onhoverShow {
         grid-row-gap: 1em;
     }
 
-    .searchResults {
-        text-align: center;
-        margin-top: 1em;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    .searchResults{
+        font-size: 16px;
     }
 
     .sortOptionsList .sortOptionsListItem {
-        display: inline;
-        padding: 3px;
+        display: block;
+        padding: 5px;
+        font-size: 30px;
+    }
+
+    .sortOptionsListItem{
+        font-size: 100px;
     }
 
     #find {
         text-align: center;
         width: 150px;
         margin-right: 3em;
-        ;
     }
 
     #find:focus {
@@ -365,7 +482,7 @@ img:hover+.onhoverShow {
     }
 
     .sortOptionsBtn {
-        font-size: small;
+        font-size: large;
     }
 
     .sidenav {
@@ -381,7 +498,9 @@ img:hover+.onhoverShow {
 
 @media screen and (max-width:927px) and (min-width:501px) {
 
-
+    .main-nav{
+        width:100%;
+    }
     .products {
         grid-template-columns: 1fr 1fr;
     }

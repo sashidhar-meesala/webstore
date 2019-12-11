@@ -21,7 +21,7 @@ const nike1 = {
   brand: `Nike`,
   colors: [`red`, `blue`, `balck`],
   stock: 4,
-  sizes: [6, 7, 8, 9],
+  sizes: [6, 7],
   discount: 10,
   onSale: false
 };
@@ -36,7 +36,7 @@ const nike2 = {
   brand: `Nike`,
   colors: [`red`, `balck`],
   stock: 0,
-  sizes: [6, 7, 8, 9],
+  sizes: [ 8, 9],
   discount: 15,
   onSale: false
 };
@@ -51,7 +51,7 @@ const nike3 = {
   brand: `Nike`,
   colors: [`red`, `blue`],
   stock: 0,
-  sizes: [7, 8, 9, 10],
+  sizes: [ 8, 9],
   discount: 20,
   onSale: true
 };
@@ -625,13 +625,14 @@ function getShoesAsHtml(shoesData) {
     onsale = `<small class="outofstock">Out of stock</small>`
     cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart" disabled style="background-color:rgba(78, 62, 62, 0.87)"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
   }
-
+  document.getElementById('numResults').innerHTML = `(${shoesData.length} Products)`;
   return `
     <section class="productsCard" id="pCard"> 
-    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:130px;" id="${shoesData.productCode}">
+    <img class="productCardImg" src="${shoesData.imageUrl}" alt="${shoesData.name}" style="width:100%;height:150px;" id="${shoesData.productCode}">
     ${heartButton}
     ${onsale}
     <h1 class="ProductCardName"><strong>${shoesData.name}</strong></h1>
+    <h1 class="brand"> ${shoesData.brand}</h1>
         <ul class="productCardList" id="productCardList">
           <li class="productCardListItem"><h3>${shoesData.category}</h3></li>
           <li class="productCardListItem"><h3 class="price">$${shoesData.price}</h3></li>
@@ -698,13 +699,15 @@ const addToWishlist = pID => {
   const cartItem = wishlist.find(item => item.ID == pID);
 
   if (cartItem) { // if a cartItem was found
-    cartItem.qty++;
     alert("Item has been removed from wishlist");
+    wishlist.pop(cartItem);
+    document.getElementById("Wishlist").innerHTML=wishlist.length;
   } else {
     wishlist.push({
       ID: pID,
       qty: 1
     });
+    document.getElementById("Wishlist").innerHTML=wishlist.length;
     alert("New wishlist item has been added wishlist");
   }
 }
@@ -721,12 +724,14 @@ const addItemToCart = pID => {
 
   if (cartItem) { // if a cartItem was found
     cartItem.qty++;
+    document.getElementById("cart").innerHTML=shoppingCart.length;
     alert("Another item has been added to your cart");
   } else {
     shoppingCart.push({
       ID: pID,
       qty: 1
     });
+    document.getElementById("cart").innerHTML=shoppingCart.length;
     alert("A new item has been added to your cart");
   }
 }
@@ -763,41 +768,56 @@ function LoadProductsByPriceFilter() {
 /**
  * Function:LoadProductsByFilters
  * This functions stores all the selected filters from the filtermenu and filters the data
- * with the heirarchy category>rating >brand> size > colour >  discount 
+ * with the heirarchy budget>category>rating >brand> size > colour >  discount 
  */
 function LoadProductsByFilters() {
   let category;
   let rating;
   let brand;
   let discount;
-  let sizeArray = [];
+  arrayByPrice=[];
   arrayByCategory = [];
   arrayByRatings = [];
   arrayByBrand = [];
   arrayByDiscount = [];
   arrayBySize = [];
+  arrayByColour=[];
+  let size = document.querySelectorAll('[name="size"]:checked');
+  let colour=document.querySelectorAll('[name="colour"]:checked');
+  let budget;
 
-
-  /*let chks = document.querySelectorAll('[name="size"]:checked');
-  //alert(chks);
-  let checked = [];
-  for (let i = 0; i < chks.length; i++) {
-    if (chks[i].checked) {
-      checked.push(parseInt(chks[i].value))
+  let selectedSizeArray = [];
+  for (let i = 0; i < size.length; i++) {
+    if (size[i].checked) {
+      selectedSizeArray.push(parseInt(size[i].value))
     }
   }
-  alert(checked);
-  let sizes = [];
-*/
 
-  // alert(shoesData.filter(element => checked.includes(element)))
+
+  let selectedColourArray = [];
+  for (let i = 0; i < colour.length; i++) {
+    if (colour[i].checked) {
+      selectedColourArray.push(colour[i].value);
+    }
+  }
+ 
+
+
+ //console.log(arrayByColour);
+if(document.getElementById('PriceFilter').value!=null && document.getElementById('PriceFilter').value != ""){
+  budget = document.getElementById('PriceFilter').value;
+  arrayByPrice = shoesData.filter(p => p.price <= budget);
+}
+else{
+  arrayByPrice=shoesData;
+}
 
   if (document.querySelector('input[name="category"]:checked') != null) {
     category = document.querySelector('input[name="category"]:checked').value;
-    alert(category);
-    arrayByCategory = shoesData.filter(p => p.category == category);
+    //alert(category);
+    arrayByCategory = arrayByPrice.filter(p => p.category == category);
   } else {
-    arrayByCategory = shoesData;
+    arrayByCategory = arrayByPrice;
   }
   if (document.querySelector('input[name="rating"]:checked') != null) {
     rating = document.querySelector('input[name="rating"]:checked').value;
@@ -814,11 +834,26 @@ function LoadProductsByFilters() {
   }
 
 
+  if(selectedSizeArray.length!=0){
+    arrayBySize=arrayByBrand.filter(s =>selectedSizeArray.filter(val => s.sizes.includes(val)).length>0);
+  }
+  else{
+    arrayBySize=arrayByBrand;
+  }
+
+  if(selectedColourArray.length!=0){
+    arrayByColour=arrayBySize.filter(s =>selectedColourArray.filter(val => s.colors.includes(val)).length>0);
+  }
+  else{
+    arrayByColour=arrayBySize;
+  }  
+
+
   if (document.querySelector('input[name="discount"]:checked') != null) {
     discount = document.querySelector('input[name="discount"]:checked').value;
-    arrayByDiscount = arrayByBrand.filter(p => p.discount == discount);
+    arrayByDiscount = arrayByColour.filter(p => p.discount == discount);
   } else {
-    arrayByDiscount = arrayByBrand;
+    arrayByDiscount = arrayByColour;
   }
 
   renderProducts(arrayByDiscount);
@@ -836,6 +871,7 @@ function LoadProductsByFilters() {
  *  and passes it to renderproducts function
  */
 function LoadProductsPriceHighTolow() {
+
   //alert("in high to low");
   const PriceHighToLowArray = shoesData
     .slice(0)
@@ -903,33 +939,6 @@ function LoadProductsOnSale() {
 
 
 
-
-/*const addToClickToHeartBtn = element => {
-  const addToWishlist = () => {
-    if (element.style.color != 'red') {
-      element.style.color = 'red';
-    } else {
-      element.style.color = 'rgb(63, 46, 46)'
-    };
-  }
-
-  element.addEventListener('click', addToWishlist)
-}
-
-const addToClickToCartBtn = element => {
-  const addTOCart = () => {
-    if (element.style.backgroundColor != `red` && element.innerHTML != `Remove from Cart`) {
-      element.style.backgroundColor = `red`;
-      element.innerHTML = `Remove from Cart`;
-    } else {
-      element.style.backgroundColor = `rgba(0, 0, 0, .87)`;
-      element.innerHTML = `Add to Cart`;
-    }
-
-  }
-  element.addEventListener('click', addTOCart)
-}*/
-
 /**
  * Function:renderProducts
  * Parameter: Array
@@ -939,6 +948,10 @@ const addToClickToCartBtn = element => {
 function renderProducts(arr) {
   document.getElementById(`app`).innerHTML = arr.map(getShoesAsHtml).join("\n");
   let res = 'Products';
+  if (arr.length > 1) {
+    res = 'Products'
+    document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
+  }
   if (arr.length == 1) {
     res = 'Product'
     document.getElementById('numResults').innerHTML = `(${arr.length} ${res})`;
@@ -971,6 +984,10 @@ window.addEventListener('load', () => {
   document.querySelectorAll('[name="category"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
   document.querySelectorAll('[name="rating"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
   document.querySelectorAll('[name="size"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.querySelectorAll('[name="colour"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+
+
+  //document.getElementById('cartBtn').addEventListener('click', event => document.querySelector('.cart-box').classList.toggle('open'));
 
 
   //start

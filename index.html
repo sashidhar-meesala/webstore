@@ -19,20 +19,18 @@
   <header>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><img href="#"
-          src="img/shoekart_logo.svg" 
-          alt="shoeKart logo"
-          height="87"
-          width="100" /></li>
-        <li class="main-nav-list-items"><a href="#">Home</a></li>
-        <li class="main-nav-list-items"><a href="#">Sports</a></li>
-        <li class="main-nav-list-items"><a href="#">Casual</a></li>
-        <li class="main-nav-list-items"><a href="#">Running</a></li>
-        <li class="main-nav-list-items">
-          <a href="#"><i class="material-icons">
-              shopping_cart
-              </i></a>
-          <!-- <button><span
+        <li><img class="logo" href="#" src="img/shoekart_logo.svg" alt="shoeKart logo" height="87" width="100" /></li>
+
+        <li class="main-nav-list-itemsx"><a href="#">Home</a></li>
+        <li class="main-nav-list-itemsx"><a href="#">Sports</a></li>
+        <li class="main-nav-list-itemsx"><a href="#">Casual</a></li>
+        <li class="main-nav-list-itemsx"><a href="#">Running</a></li>
+        <li class="main-nav-list-itemsx">
+          <a href="#" id="cartBtn" class="trigger">Your Cart<label id="cart" class="cart">1</label></a>
+        </li>
+        <li class="main-nav-list-itemsx"><a href="#">Your wishlist<label id="Wishlist" class="Wishlist">1</label></a>
+        </li>
+        <!-- <button><span
               class="material-icons iconfav">favorite_border</span> Wishlist</button> -->
         <!-- <li class="main-nav-list-items"><button><span
               class="material-icons iconcart">shopping_cart</span>My cart</button></li> -->
@@ -75,127 +73,137 @@
         <li class="sortOptionsListItem">
           <h1 style=" font-family: 'Roboto Mono', monospace;">Sort By</h1>
         </li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceLowToHigh">Price Low to High</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceHighToLow">Price High to Low</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="availability">Availability</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceLowToHigh">Price Low to
+            High</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="PriceHighToLow">Price High to
+            Low</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn"
+            id="availability">Availability</button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="topRated">Top Rated</button>
+        </li>
         <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="onSale">On Sale!</button></li>
-        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="filter"><i class="material-icons">
-          filter_list
-          </i></button></li>
+        <li class="sortOptionsListItem"><button type="button" class="sortOptionsBtn" id="filter"><i
+              class="material-icons">
+              filter_list
+            </i></button></li>
       </ul>
     </section>
     <h2 class="searchResults">Displaying Products: <small id="numResults"></small></h2>
     <section class="layoutTheme" id="layoutTheme">
       <!-- Filtering product form -->
-      <article><section class="sidenav" id="filtermenu">
-        <form name="filterform" class="filterclass">
-          <h1 style="font-family: 'Roboto Mono', monospace; color:rgb(253, 148, 19)">Custom Filters:</h1>
-          <hr>
-          <fieldset>
-            <legend>whats your budget?</legend>
-            <input type="text" name="PriceSearch" id="PriceFilter">
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Category</legend>
-            <ul>
-              <li><input type="radio" name="category" value="casual" id="sports"><label for="sports">Casual</label></li>
-              <li><input type="radio" name="category" value="running" id="running"><label for="running">Running</label></li>
-              <li><input type="radio" name="category" value="sports" id="sports"><label for="sports">Sports</label></li>
-            </ul>
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Colour</legend>
-            <ul>
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-            </ul>
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><input type="checkbox" name="size" value="6" id="uksix"> <label for="6">UK 6</label></li>
-              <li><input type="checkbox" name="size" value="7" id="ukseven"> <label for="7">UK 7</label></li>
-              <li><input type="checkbox" name="size" value="8" id="ukseight"> <label for="8">UK 8</label></li>
-              <li><input type="checkbox" name="size" value="9" id="uknine"> <label for="9">UK 9</label></li>
-              <li><input type="checkbox" name="size" value="10" id="ukten"> <label for="10">UK 10</label></li>
-            </ol>
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Ratings (at least)</legend>
-            <ol>
-              <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
-                <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
-                <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span
-                    class="material-icons">star_border</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
-                <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span><span class="material-icons">star_border</span><span
-                    class="material-icons">star_border</span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Discount</legend>
-            <ul>
-            <li>
-              <input type="radio" name="discount" value="10" id="tenpercent"><label for="10">10%</label>
-              </li>
-              <li>
+      <article>
+        <section class="sidenav" id="filtermenu">
+          <form name="filterform" class="filterclass">
+            <h1 style="font-family: 'Roboto Mono', monospace; color:rgb(253, 148, 19)">Custom Filters:</h1>
+            <hr>
+            <fieldset>
+              <legend>whats your budget?</legend>
+              <input type="text" name="PriceSearch" id="PriceFilter">
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Category</legend>
+              <ul>
+                <li><input type="radio" name="category" value="casual" id="sports"><label for="sports">Casual</label>
+                </li>
+                <li><input type="radio" name="category" value="running" id="running"><label
+                    for="running">Running</label></li>
+                <li><input type="radio" name="category" value="sports" id="sports"><label for="sports">Sports</label>
+                </li>
+              </ul>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Colour</legend>
+              <ul>
+                <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              </ul>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Sizes</legend>
+              <ol>
+                <li><input type="checkbox" name="size" value="6" id="uksix"> <label for="6">UK 6</label></li>
+                <li><input type="checkbox" name="size" value="7" id="ukseven"> <label for="7">UK 7</label></li>
+                <li><input type="checkbox" name="size" value="8" id="ukseight"> <label for="8">UK 8</label></li>
+                <li><input type="checkbox" name="size" value="9" id="uknine"> <label for="9">UK 9</label></li>
+                <li><input type="checkbox" name="size" value="10" id="ukten"> <label for="10">UK 10</label></li>
+              </ol>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Ratings (at least)</legend>
+              <ol>
+                <li>
+                  <input type="radio" name="rating" value="4" id="aboveFour">
+                  <label for="aboveFour">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="3" id="aboveThree">
+                  <label for="aboveThree">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="2" id="aboveTwo">
+                  <label for="aboveTwo">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span
+                      class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="1" id="aboveOne">
+                  <label for="aboveOne">
+                    <span class="material-icons">star</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span><span class="material-icons">star_border</span><span
+                      class="material-icons">star_border</span>
+                  </label>
+                </li>
+              </ol>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Discount</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="discount" value="10" id="tenpercent"><label for="10">10%</label>
+                </li>
+                <li>
                   <input type="radio" name="discount" value="15" id="fifteenpercent"><label for="15">15%</label>
-              </li>
-              <li>
+                </li>
+                <li>
                   <input type="radio" name="discount" value="20" id="twentypercent"><label for="20">20%</label>
-             </li>
-            </ul>
-          </fieldset>
-          <hr>
-          <fieldset>
-            <legend>Brand</legend>
-            <ul>
-              <li><input type="radio" name="brand" value="nike" id="nike"><label for="nike">Nike</label></li>
-              <li><input type="radio" name="brand" value="adidas" id="adidas"><label for="adidas">Adidas</label></li>
-              <li><input type="radio" name="brand" value="reebok" id="reebok"><label for="reebok">Reebok</label></li>
-              <li><input type="radio" name="brand" value="puma" id="puma"><label for="puma">Puma</label></li>
-            </ul>
-          </fieldset>
-        </form>
-      </section>
-    <section class="webbanner">
-      <img src="img/shoekart.gif" alt="">
-    </section></article>
-      
+                </li>
+              </ul>
+            </fieldset>
+            <hr>
+            <fieldset>
+              <legend>Brand</legend>
+              <ul>
+                <li><input type="radio" name="brand" value="nike" id="nike"><label for="nike">Nike</label></li>
+                <li><input type="radio" name="brand" value="adidas" id="adidas"><label for="adidas">Adidas</label></li>
+                <li><input type="radio" name="brand" value="reebok" id="reebok"><label for="reebok">Reebok</label></li>
+                <li><input type="radio" name="brand" value="puma" id="puma"><label for="puma">Puma</label></li>
+              </ul>
+            </fieldset>
+          </form>
+        </section>
+        <section class="webbanner">
+          <img src="img/shoekart.gif" alt="">
+        </section>
+      </article>
+
       <article class="products" id="app"> </article>
     </section>
     <footer class="footermenu">
