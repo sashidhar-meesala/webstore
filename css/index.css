@@ -5,59 +5,53 @@ font-family: 'Bebas Neue', cursive;*/
 
 /*styling for navbar
 */
-.main-nav{
-    background: linear-gradient(to right, #131314,#080b13);
-    color:#fff;
+.main-nav {
+    background: linear-gradient(to right, #131314, #080b13);
+    color: #fff;
     margin-bottom: 2em;
     width: 100% !important;
-  }
-  
- 
-  .main-nav-list ul {
+}
+.main-nav-list ul {
     list-style-type: none;
-    margin-bottom: 1rem;;
+    margin-bottom: 1rem;
+    ;
     padding: 0;
     overflow: hidden;
-  }
-  
-  .main-nav-list li {
+}
+.main-nav-list li {
     display: inline-block;
-    padding:0.5rem;
+    padding: 0.5rem;
     font-size: 1rem;
-    
-  }
-  
-  li a {
+
+}
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 15px 16px;
     text-decoration: none;
-  }
-  
-  .main-nav-list-itemsx{
+}
+.main-nav-list-itemsx {
     margin-left: 6.2em;
 }
-  .searchResults{
-      text-align: center;
-      margin-left:4em;
-      font-size: 20px;
-      font-weight: bold;
-      color: #e98b1f;  
-  }
-   
-  
+.searchResults {
+    text-align: center;
+    margin-left: 4em;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e98b1f;
+}
 /*styling for cart*/
-.cart 
-{
+.cart {
     color: rgb(8, 0, 0);
     font-size: 16px;
     background-color: rgb(243, 150, 28);
     padding: 0.5rem;
     margin-left: 0.5rem;
     border-radius: 16px;
-    border:3px solid rgb(209, 198, 198);
+    border: 3px solid rgb(209, 198, 198);
 }
+
 /*.cart-box {
     background-color: white; color: black; box-shadow: 0 0 0.5em inset rgba(0,0,0,0.8); overflow: hidden; transform: scaleY(0); transition: transform 0.3s;
 }
@@ -66,15 +60,14 @@ font-family: 'Bebas Neue', cursive;*/
 }*/
 
 /*styling for wishlist*/
-.Wishlist 
-{
+.Wishlist {
     color: rgb(8, 0, 0);
     font-size: 16px;
     background-color: rgb(243, 150, 28);
     padding: 0.5rem;
     margin-left: 0.5rem;
     border-radius: 16px;
-    border:3px solid rgb(209, 198, 198);
+    border: 3px solid rgb(209, 198, 198);
 }
 
 /*styling for search label*/
@@ -171,7 +164,7 @@ font-family: 'Bebas Neue', cursive;*/
 
 }
 
-.productCardImg{
+.productCardImg {
     height: 120px;
     width: 100%;
 }
@@ -223,7 +216,7 @@ font-family: 'Bebas Neue', cursive;*/
 
 
 /*styling for brand inner html form js*/
-.brand{
+.brand {
     color: #e98b1f;
     font-weight: bold;
     font-size: 19px;
@@ -243,6 +236,56 @@ font-family: 'Bebas Neue', cursive;*/
     font-family: 'Roboto Mono', monospace;
 }
 
+/*styling for modals - cart box and wishlist*/
+.is-hidden {
+    display: none;
+}
+
+.button-close {
+    display: inline-block;
+    width: 270px;
+    height: 0px;
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #080500;
+    background-color: #ffffff
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 245px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.modal-content {
+    bottom: 100px;
+    top: 100px;
+    overflow-y: auto;
+    padding: 20px 30px;
+    width: auto;
+    position: fixed;
+    min-height: 300px;
+    margin: 5% auto 0;
+    background: rgb(255, 255, 255);
+    z-index: -1;
+    border: 1.5px solid olive;
+}
+
+.cart-heading {
+    text-align: center;
+    margin: 1em 0 1em 0;
+    line-height: 28px;
+    background-color: #080500;
+    color: #fff;
+}
+
 /*styling for price inner html*/
 .price {
     color: rgb(245, 122, 51);
@@ -255,16 +298,17 @@ font-family: 'Bebas Neue', cursive;*/
     display: inline-block;
 }
 
-.color-box{
-    margin-right:0.5em;
+.color-box {
+    margin-right: 0.5em;
 }
 
-.colour-span{
-    padding:0 0.5em 0 0.5em;
+.colour-span {
+    padding: 0 0.5em 0 0.5em;
     border: 1.5px solid rgb(66, 63, 17);
 }
-.checked{
-    color:rgb(245, 122, 51);
+
+.checked {
+    color: rgb(245, 122, 51);
 }
 
 
@@ -274,6 +318,7 @@ font-family: 'Bebas Neue', cursive;*/
     text-align: center;
     color: white;
 }
+
 .heartBtn {
     position: absolute;
     top: 0px;
@@ -348,7 +393,7 @@ font-family: 'Bebas Neue', cursive;*/
 
 .footerarticle {
     background-color: rgb(0, 0, 0);
-    padding:0.8em 0 0.8em 0;
+    padding: 0.8em 0 0.8em 0;
 }
 
 
@@ -360,16 +405,20 @@ font-family: 'Bebas Neue', cursive;*/
     .main-nav-list li {
         display: inline;
         margin: 0;
-        padding-bottom:0.1rem;;
+        padding-bottom: 0.1rem;
+        ;
     }
-    .li a{
+
+    .li a {
         display: inline;
-        margin:0;
+        margin: 0;
         padding: 0;
     }
-    .logo{
-       margin-left:32vw;
+
+    .logo {
+        margin-left: 32vw;
     }
+
     .layoutTheme {
         grid-template-columns: 1fr;
     }
@@ -377,11 +426,12 @@ font-family: 'Bebas Neue', cursive;*/
     .products {
         grid-template-columns: 1fr;
     }
-    .productsCard{
+
+    .productsCard {
         width: fit-content;
     }
 
-    .sortmenu{
+    .sortmenu {
         width: 20%;
     }
 
@@ -395,7 +445,7 @@ font-family: 'Bebas Neue', cursive;*/
         grid-row-gap: 1em;
     }
 
-    .searchResults{
+    .searchResults {
         font-size: 16px;
     }
 
@@ -405,17 +455,20 @@ font-family: 'Bebas Neue', cursive;*/
         font-size: 20px;
     }
 
-    .sortOptionsListItem{
+    .sortOptionsListItem {
         font-size: 100px;
     }
-    .searchbar{
-        margin:1px;
+
+    .searchbar {
+        margin: 1px;
     }
-    .searchResults{
-        margin:0 1em 0 1em;
+
+    .searchResults {
+        margin: 0 1em 0 1em;
         font-size: small;
 
     }
+
     #find {
         text-align: center;
         width: 150px;
@@ -432,7 +485,7 @@ font-family: 'Bebas Neue', cursive;*/
 
     #filtermenu {
         font-size: small;
-        margin:0em 3em 0 3em;
+        margin: 0em 3em 0 3em;
     }
 
     .search {
@@ -451,14 +504,25 @@ font-family: 'Bebas Neue', cursive;*/
 
     .sidenav {
         margin-left: 3em;
-        margin-top:2em;
+        margin-top: 2em;
+    }
+    .modal-content {
+        bottom: 650px;
+        top: 100px;
+        left:20px;
+        right:100px;
+        overflow-y: auto;
+        padding: 20px 30px;
+        width: auto;
+        min-height: 300px;
+        margin: 5% auto 0;
     }
 
-    
-    .main-nav-list-itemsx{
+    .main-nav-list-itemsx {
         margin-left: 0;
     }
-    .footersection{
+
+    .footersection {
         width: 100%;
     }
 }
@@ -468,9 +532,10 @@ font-family: 'Bebas Neue', cursive;*/
 
 @media screen and (max-width:927px) and (min-width:501px) {
 
-    .main-nav-list-itemsx{
+    .main-nav-list-itemsx {
         margin-left: 0.3em;
     }
+
     .products {
         grid-template-columns: 1fr 1fr;
     }
@@ -482,12 +547,16 @@ font-family: 'Bebas Neue', cursive;*/
     .webbanner {
         height: max-content;
     }
-
+    
+    .modal-content {
+        top: 250px;
+       
+    }
     .footersection {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 1em;
     }
-     
+
 
 
 
@@ -497,7 +566,7 @@ font-family: 'Bebas Neue', cursive;*/
 /* For Desktop */
 @media screen and (max-width:1128px) and (min-width:928px) {
     .products {
-      grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .sortOptionsBtn:hover {
@@ -507,7 +576,7 @@ font-family: 'Bebas Neue', cursive;*/
         border: 2px solid rgb(226, 223, 223);
     }
 
-    .main-nav-list-itemsx{
+    .main-nav-list-itemsx {
         margin-left: 2em;
     }
 

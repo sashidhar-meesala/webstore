@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +10,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css?family=Baskervville|Bebas+Neue|Roboto|Roboto+Mono&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
   <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
   <header>
     <nav class="main-nav">
@@ -26,17 +24,13 @@
         <li class="main-nav-list-itemsx"><a href="#">Casual</a></li>
         <li class="main-nav-list-itemsx"><a href="#">Running</a></li>
         <li class="main-nav-list-itemsx">
-          <a href="#" id="cartBtn" class="trigger">Your Cart<label id="cart" class="cart">1</label></a>
+          <a href="#" id="cartBtn">Your Cart<label id="cart" class="cart">0</label></a>
+
         </li>
-        <li class="main-nav-list-itemsx"><a href="#">Your wishlist<label id="Wishlist" class="Wishlist">1</label></a>
-        </li>
-        <!-- <button><span
-              class="material-icons iconfav">favorite_border</span> Wishlist</button> -->
-        <!-- <li class="main-nav-list-items"><button><span
-              class="material-icons iconcart">shopping_cart</span>My cart</button></li> -->
+        <li class="main-nav-list-itemsx">
+          <a href="#" id="wlist">Your wishlist<label id="Wishlist" class="Wishlist">0</label></a>
       </ul>
     </nav>
-
     <!--<button type="button">
       <span class="material-icons">menu</span>
     </button> -->
@@ -56,16 +50,28 @@
         <li><a href="#">Webpage</a></li>
       </ul>
     </nav>-->
-
-    <!-- Search the site -->
-    <form class="search" name="searchbar">
-      <label>Search Products
-        <input type="search" name="searchbar" id="find" class="searchbar">
-      </label>
-    </form>
-
+    <aside class="overlay is-hidden" id="cartbox">
+      <section class="modal-content">
+        <button class="button-close" id="closeCart">Close</button>
+        <h1 class="cart-heading">Your Cart</h1>
+        <section class="cart-grid">
+          <ul id="cartDetails"></ul>
+        </section>
+      </section>
+      <!--</aside>
+      <aside class="overlay is-hidden" id="wlist">
+          <section class="modal-content">    
+              <h1 class="cart-heading">Your wishlist</h1>
+                  <ul id="wishlist"></ul>            
+          </section>
+        </aside>>-->
+      <!-- Search the site -->
+      <form class="search" name="searchbar">
+        <label>Search Products
+          <input type="search" name="searchbar" id="find" class="searchbar">
+        </label>
+      </form>
   </header>
-
   <main>
     <!--<h1 style="text-align: center;"><label id="headingH1"></label>Displaying products</h1>-->
     <section class="sortMenu">
@@ -90,6 +96,7 @@
     </section>
     <h2 class="searchResults">Displaying Products: <small id="numResults"></small></h2>
     <section class="layoutTheme" id="layoutTheme">
+
       <!-- Filtering product form -->
       <article>
         <section class="sidenav" id="filtermenu">
@@ -203,6 +210,7 @@
           <img src="img/shoekart.gif" alt="">
         </section>
       </article>
+
       <article class="products" id="app"> </article>
     </section>
     <footer class="footermenu">

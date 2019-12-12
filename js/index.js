@@ -3,9 +3,7 @@ const settings = {
   perpage: 10,
   current: 1,
   totalPages: 4
-
 }
-
 /**
  * DATA 
  * consists name,image url, product code, category of the product, price, brand, colors available, sizes, discount, 
@@ -34,9 +32,9 @@ const nike2 = {
   price: 100.99,
   rating: 3.2,
   brand: `Nike`,
-  colors: [`red`, `black`,`green`],
+  colors: [`red`, `black`, `green`],
   stock: 0,
-  sizes: [ 8, 9],
+  sizes: [8, 9],
   discount: 15,
   onSale: false
 };
@@ -51,7 +49,7 @@ const nike3 = {
   brand: `Nike`,
   colors: [`red`, `blue`],
   stock: 6,
-  sizes: [ 6, 9,10],
+  sizes: [6, 9, 10],
   discount: 20,
   onSale: false
 };
@@ -112,7 +110,7 @@ const nike7 = {
   brand: `nike`,
   colors: [`black`],
   stock: 10,
-  sizes: [9,10],
+  sizes: [9, 10],
   discount: 20,
   onSale: true
 };
@@ -125,7 +123,7 @@ const nike8 = {
   price: 209.99,
   rating: 4.8,
   brand: `Nike`,
-  colors: [`blue`,`white`],
+  colors: [`blue`, `white`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 15,
@@ -140,9 +138,9 @@ const nike9 = {
   price: 199.99,
   rating: 4.3,
   brand: `Nike`,
-  colors: [`white`, `blue`,`green`],
+  colors: [`white`, `blue`, `green`],
   stock: 15,
-  sizes: [ 7, 9],
+  sizes: [7, 9],
   discount: 20,
   onSale: true
 };
@@ -155,7 +153,7 @@ const nike10 = {
   price: 133.45,
   rating: 2.9,
   brand: `Nike`,
-  colors: [`white`, `green`,`red`],
+  colors: [`white`, `green`, `red`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 10,
@@ -214,7 +212,7 @@ const puma2 = {
   price: 112.99,
   rating: 4.2,
   brand: `Puma`,
-  colors: ['black' ,`blue`],
+  colors: ['black', `blue`],
   stock: 0,
   sizes: [8, 9],
   discount: 15,
@@ -261,7 +259,7 @@ const puma5 = {
   brand: `Puma`,
   colors: [`red`, `blue`],
   stock: 22,
-  sizes: [ 8, 9],
+  sizes: [8, 9],
   discount: 20,
   onSale: false
 };
@@ -304,9 +302,9 @@ const puma8 = {
   price: 159.99,
   rating: 5,
   brand: `puma`,
-  colors: [`blue`,`green`,`black`],
+  colors: [`blue`, `green`, `black`],
   stock: 10,
-  sizes: [ 8, 9],
+  sizes: [8, 9],
   discount: 10,
   onSale: false
 };
@@ -318,7 +316,7 @@ const puma9 = {
   productCode: 119,
   category: `running`,
   price: 190,
-  rating:3.9,
+  rating: 3.9,
   brand: `Puma`,
   colors: [`green`, `blue`],
   stock: 0,
@@ -350,7 +348,7 @@ const puma11 = {
   price: 200,
   rating: 4.2,
   brand: `puma`,
-  colors: [`red`, `blue`,`black`],
+  colors: [`red`, `blue`, `black`],
   stock: 10,
   sizes: [7, 8, 9],
   discount: 10,
@@ -386,7 +384,7 @@ const puma = [
   puma12
 ];
 
-const adidas1={
+const adidas1 = {
   name: `Adidas  XVR`,
   imageUrl: `img/adidas/casual/adidas-casual%20(1).jpeg`,
   productCode: 122,
@@ -402,7 +400,7 @@ const adidas1={
 };
 
 
-const adidas2={
+const adidas2 = {
   name: `Adidas Zoomx`,
   imageUrl: `img/adidas/casual/adidas-casual%20(2).jpeg`,
   productCode: 123,
@@ -418,7 +416,7 @@ const adidas2={
 };
 
 
-const adidas3={
+const adidas3 = {
   name: `Adidas Casual TN`,
   imageUrl: `img/adidas/casual/adidas-casual%20(3).jpeg`,
   productCode: 124,
@@ -434,7 +432,7 @@ const adidas3={
 };
 
 
-const adidas4={
+const adidas4 = {
   name: `Adidas Casuals`,
   imageUrl: `img/adidas/casual/adidas-casual%20(4).jpeg`,
   productCode: 125,
@@ -449,7 +447,7 @@ const adidas4={
   onSale: true
 };
 
-const adidas5={
+const adidas5 = {
   name: `Adidas runner XS`,
   imageUrl: `img/adidas/running/adidas-running%20(1).jpeg`,
   productCode: 126,
@@ -464,7 +462,7 @@ const adidas5={
   onSale: true
 };
 
-const adidas6={
+const adidas6 = {
   name: `Adidas runner XR`,
   imageUrl: `img/adidas/running/adidas-running%20(2).jpeg`,
   productCode: 127,
@@ -481,7 +479,7 @@ const adidas6={
 
 
 
-const adidas7={
+const adidas7 = {
   name: `Adidas runner BZ`,
   imageUrl: `img/adidas/running/adidas-running%20(3).jpeg`,
   productCode: 128,
@@ -497,7 +495,7 @@ const adidas7={
 };
 
 
-const adidas8={
+const adidas8 = {
   name: `Adidas runner VZ`,
   imageUrl: `img/adidas/running/adidas-running%20(4).jpeg`,
   productCode: 129,
@@ -513,7 +511,7 @@ const adidas8={
 };
 
 
-const adidas9={
+const adidas9 = {
   name: `Adidas Sport pro`,
   imageUrl: `img/adidas/sports/adidas-sports%20(1).jpeg`,
   productCode: 130,
@@ -530,7 +528,7 @@ const adidas9={
 
 
 
-const adidas10={
+const adidas10 = {
   name: `Adidas sport x`,
   imageUrl: `img/adidas/sports/adidas-sports%20(2).jpeg`,
   productCode: 131,
@@ -546,7 +544,7 @@ const adidas10={
 };
 
 
-const adidas11={
+const adidas11 = {
   name: `Adidas sport max`,
   imageUrl: `img/adidas/sports/adidas-sports%20(3).jpeg`,
   productCode: 132,
@@ -562,7 +560,7 @@ const adidas11={
 };
 
 
-const adidas12={
+const adidas12 = {
   name: `Adidas sport zs`,
   imageUrl: `img/adidas/sports/adidas-sports%20(4).jpeg`,
   productCode: 133,
@@ -570,58 +568,42 @@ const adidas12={
   price: 120,
   rating: 3.1,
   brand: `Adidas`,
-  colors: [`red`, `blue`,`black`],
+  colors: [`red`, `blue`, `black`],
   stock: 10,
-  sizes:  [8, 9],
+  sizes: [8, 9],
   discount: 10,
   onSale: false
 };
 
-const adidas=[
-  adidas1,adidas2,adidas3,adidas4,adidas5,adidas6,adidas7,adidas8,adidas9,adidas10,adidas11,adidas12
+const adidas = [
+  adidas1, adidas2, adidas3, adidas4, adidas5, adidas6, adidas7, adidas8, adidas9, adidas10, adidas11, adidas12
 ];
 
 const shoesData = nike.concat(puma).concat(adidas);
-
-
-const shoppingCart = [{
-  ID: 101,
-  qty: 1
-}];
-
-const wishlist = [{
-  ID: 100,
-  qty: 1
-}];
-
-
+const shoppingCart = [{}];
+const wishlist = [{}];
 
 //functions
-
-
-
 /*function :getShoesAsHtml
 parameter: js object 
 working : This function takes the js data object and returns the dynamic content embedded into application.*/
 
 function getShoesAsHtml(shoesData) {
-  let color='';
-  for(let i=0; i<shoesData.colors.length; i++)
-  {
-    color +=`<li class="color-box" style="background-color:${shoesData.colors[i]}"><span class="colour-span"></span></p>`;
-  }  
+  let color = '';
+  for (let i = 0; i < shoesData.colors.length; i++) {
+    color += `<li class="color-box" style="background-color:${shoesData.colors[i]}"><span class="colour-span"></span></p>`;
+  }
   let cartBtn = ``;
   let heartButton = `<button type="button" class="heartBtn" data-code="${shoesData.productCode}" id="heartBtn"><span class="material-icons">favorite</span></button>`;
   let onsale = '';
-  if (shoesData.onSale == true){
+  if (shoesData.onSale == true) {
     onsale = `<small class="onsale_banner">On Sale!</small>`;
+  } else {
+    onsale = ``;
   }
-  else{
-    onsale=``;
-  }
-  
-  if(shoesData.stock > 0) {
-    
+
+  if (shoesData.stock > 0) {
+
     cartBtn = `<button type="button" class="productCardButton"  data-code="${shoesData.productCode}" id="addtocart"><span class="material-icons">add_shopping_cart</span> Add to Cart</button> `;
 
   } else {
@@ -646,15 +628,34 @@ function getShoesAsHtml(shoesData) {
         </ul>
         ${cartBtn}
         </section>`;
-       
+
 }
 
 document.getElementById(`app`).innerHTML = shoesData
   .map(getShoesAsHtml)
   .join("\n");
-  document.getElementById('numResults').innerHTML = `(${shoesData.length} Products)`;
+document.getElementById('numResults').innerHTML = `(${shoesData.length} Products)`;
 
+/*
+Function getCartAsHTML
+This function takes array as parameter and uses its index values such as name, price etc..
+returns html to be embedded 
+*/
+function getCartAsHTML(arr) {
+  return `
+    <section class="productsCard" id="pCard"> 
+    <img class="productCardImg" src="${arr.imageUrl}" alt="${arr.name}"">
+    <h1 class="ProductCardName"><strong>${arr.name}</strong></h1>
+    <h1 class="brand"> ${arr.brand}</h1>
+        <ul class="productCardList" id="productCardList">
+          <li class="productCardListItem"><h3>${arr.category}</h3></li>
+          <li class="productCardListItem"><h3 class="price">$${arr.price}</h3></li>
+          <li class="productCardListItem"><h4>${arr.rating}<span class="fa fa-star checked"><h4></li>
+        </ul>
+        <button class="productCardButton"> Checkout</button>
+        </section>`;
 
+}
 
 /*search functionality
 Function:LoadProductsByName
@@ -690,27 +691,25 @@ function handleClicksofBtns() {
   }
 }
 
-
 //FUNCTION: addToWishlist
 //PARAMETER :dataset - productid of the product
 // this function checks whether the product is present in wishlist if not present it adds to wishlist 
 //if already present it removes from the wishlist
 const addToWishlist = pID => {
-
-
   const cartItem = wishlist.find(item => item.ID == pID);
-
+  let name = shoesData.filter(p => p.productCode == pID);
   if (cartItem) { // if a cartItem was found
-    alert("Item has been removed from wishlist");
+
+    alert(`${name[0].name} has been removed from wishlist`);
     wishlist.pop(cartItem);
-    document.getElementById("Wishlist").innerHTML=wishlist.length;
+    document.getElementById("Wishlist").innerHTML = wishlist.length - 1;
   } else {
     wishlist.push({
       ID: pID,
       qty: 1
     });
-    document.getElementById("Wishlist").innerHTML=wishlist.length;
-    alert("New wishlist item has been added wishlist");
+    document.getElementById("Wishlist").innerHTML = wishlist.length - 1;
+    alert(`${name[0].name} has been added wishlist`);
   }
 }
 
@@ -721,20 +720,22 @@ const addToWishlist = pID => {
 
 const addItemToCart = pID => {
   // [ {courseid: 101, qty: 1} ]
-
+  let cart = document.getElementById("cartDetails");
   const cartItem = shoppingCart.find(item => item.ID == pID);
+  let name = shoesData.filter(p => p.productCode == pID);
 
   if (cartItem) { // if a cartItem was found
-    cartItem.qty++;
-    document.getElementById("cart").innerHTML=shoppingCart.length;
-    alert("Another item has been added to your cart");
+    document.getElementById("cart").innerHTML = shoppingCart.length - 1;
+    alert(` ${name[0].name} is already in your cart`);
+
   } else {
     shoppingCart.push({
       ID: pID,
       qty: 1
     });
-    document.getElementById("cart").innerHTML=shoppingCart.length;
-    alert("A new item has been added to your cart");
+    document.getElementById("cart").innerHTML = shoppingCart.length - 1;
+    alert(`${name[0].name} has been added to your cart`);
+    cart.innerHTML += getCartAsHTML(name[0]);
   }
 }
 
@@ -745,13 +746,11 @@ function ToggleFilterMenu() {
   const filtermenu = document.getElementById("filtermenu");
   if (filtermenu.style.display === "") {
     filtermenu.style.display = "none";
-  } 
-  
-  else  {
+  } else {
     filtermenu.style.display = "";
   }
 
-  
+
 }
 
 
@@ -777,15 +776,15 @@ function LoadProductsByFilters() {
   let rating;
   let brand;
   let discount;
-  arrayByPrice=[];
+  arrayByPrice = [];
   arrayByCategory = [];
   arrayByRatings = [];
   arrayByBrand = [];
   arrayByDiscount = [];
   arrayBySize = [];
-  arrayByColour=[];
+  arrayByColour = [];
   let size = document.querySelectorAll('[name="size"]:checked');
-  let colour=document.querySelectorAll('[name="colour"]:checked');
+  let colour = document.querySelectorAll('[name="colour"]:checked');
   let budget;
 
   let selectedSizeArray = [];
@@ -802,17 +801,16 @@ function LoadProductsByFilters() {
       selectedColourArray.push(colour[i].value);
     }
   }
- 
 
 
- //console.log(arrayByColour);
-if(document.getElementById('PriceFilter').value!=null && document.getElementById('PriceFilter').value != ""){
-  budget = document.getElementById('PriceFilter').value;
-  arrayByPrice = shoesData.filter(p => p.price <= budget);
-}
-else{
-  arrayByPrice=shoesData;
-}
+
+  //console.log(arrayByColour);
+  if (document.getElementById('PriceFilter').value != null && document.getElementById('PriceFilter').value != "") {
+    budget = document.getElementById('PriceFilter').value;
+    arrayByPrice = shoesData.filter(p => p.price <= budget);
+  } else {
+    arrayByPrice = shoesData;
+  }
 
   if (document.querySelector('input[name="category"]:checked') != null) {
     category = document.querySelector('input[name="category"]:checked').value;
@@ -836,19 +834,17 @@ else{
   }
 
 
-  if(selectedSizeArray.length!=0){
-    arrayBySize=arrayByBrand.filter(s =>selectedSizeArray.filter(val => s.sizes.includes(val)).length>0);
-  }
-  else{
-    arrayBySize=arrayByBrand;
+  if (selectedSizeArray.length != 0) {
+    arrayBySize = arrayByBrand.filter(s => selectedSizeArray.filter(val => s.sizes.includes(val)).length > 0);
+  } else {
+    arrayBySize = arrayByBrand;
   }
 
-  if(selectedColourArray.length!=0){
-    arrayByColour=arrayBySize.filter(s =>selectedColourArray.filter(val => s.colors.includes(val)).length>0);
+  if (selectedColourArray.length != 0) {
+    arrayByColour = arrayBySize.filter(s => selectedColourArray.filter(val => s.colors.includes(val)).length > 0);
+  } else {
+    arrayByColour = arrayBySize;
   }
-  else{
-    arrayByColour=arrayBySize;
-  }  
 
 
   if (document.querySelector('input[name="discount"]:checked') != null) {
@@ -939,6 +935,27 @@ function LoadProductsOnSale() {
   renderProducts(onSaleArray);
 }
 
+/*
+to display cart box*/
+let cartbox = document.getElementById('cartbox');
+//var wlist = document.getElementById('wlist');
+
+function openCartModal() {
+  cartbox.classList.remove("is-hidden");
+}
+
+function closeCartModal() {
+  cartbox.classList.add("is-hidden");
+}
+
+/*function openWishModal(){
+  wlist.classList.remove("is-hidden");
+}
+
+function closeWishModal(){
+  wlist.classList.add("is-hidden");
+}*/
+
 
 
 /**
@@ -969,6 +986,7 @@ function renderProducts(arr) {
 
 
 
+
 //execution
 window.addEventListener('load', () => {
   document.getElementById(`find`).addEventListener("change", LoadProductsByName);
@@ -986,6 +1004,10 @@ window.addEventListener('load', () => {
   document.querySelectorAll('[name="rating"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
   document.querySelectorAll('[name="size"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
   document.querySelectorAll('[name="colour"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
+  document.getElementById('cartBtn').addEventListener('click', openCartModal);
+  document.getElementById('closeCart').addEventListener('click', closeCartModal);
+  //document.getElementById('wlist').addEventListener('click',openWishModal);
+  //document.getElementById('closeCart').addEventListener('click',closeWishModal);
 
 
   //document.getElementById('cartBtn').addEventListener('click', event => document.querySelector('.cart-box').classList.toggle('open'));
