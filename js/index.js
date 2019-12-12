@@ -657,6 +657,23 @@ function getCartAsHTML(arr) {
 
 }
 
+function getWlistAsHTML(arr) {
+  return `
+    <section class="productsCard" id="pCard"> 
+    <img class="productCardImg" src="${arr.imageUrl}" alt="${arr.name}"">
+    <h1 class="ProductCardName"><strong>${arr.name}</strong></h1>
+    <h1 class="brand"> ${arr.brand}</h1>
+        <ul class="productCardList" id="productCardList">
+          <li class="productCardListItem"><h3>${arr.category}</h3></li>
+          <li class="productCardListItem"><h3 class="price">$${arr.price}</h3></li>
+          <li class="productCardListItem"><h4>${arr.rating}<span class="fa fa-star checked"><h4></li>
+        </ul>
+        <button class="productCardButton"> Checkout</button>
+        </section>`;
+
+}
+
+
 /*search functionality
 Function:LoadProductsByName
 this function takes the user input from text and matches the name of the product with that of the user's input 
@@ -697,6 +714,7 @@ function handleClicksofBtns() {
 //if already present it removes from the wishlist
 const addToWishlist = pID => {
   const cartItem = wishlist.find(item => item.ID == pID);
+  let wl= document.getElementById('wishlist');
   let name = shoesData.filter(p => p.productCode == pID);
   if (cartItem) { // if a cartItem was found
 
@@ -710,6 +728,8 @@ const addToWishlist = pID => {
     });
     document.getElementById("Wishlist").innerHTML = wishlist.length - 1;
     alert(`${name[0].name} has been added wishlist`);
+    wl.innerHTML+=getWlistAsHTML(name[0]);
+
   }
 }
 
@@ -938,7 +958,7 @@ function LoadProductsOnSale() {
 /*
 to display cart box*/
 let cartbox = document.getElementById('cartbox');
-//var wlist = document.getElementById('wlist');
+let wlist = document.getElementById('wishlistbox');
 
 function openCartModal() {
   cartbox.classList.remove("is-hidden");
@@ -948,13 +968,13 @@ function closeCartModal() {
   cartbox.classList.add("is-hidden");
 }
 
-/*function openWishModal(){
+function openWishModal(){
   wlist.classList.remove("is-hidden");
 }
 
 function closeWishModal(){
   wlist.classList.add("is-hidden");
-}*/
+}
 
 
 
@@ -1006,8 +1026,8 @@ window.addEventListener('load', () => {
   document.querySelectorAll('[name="colour"]').forEach(chkbox => chkbox.addEventListener('change', LoadProductsByFilters));
   document.getElementById('cartBtn').addEventListener('click', openCartModal);
   document.getElementById('closeCart').addEventListener('click', closeCartModal);
-  //document.getElementById('wlist').addEventListener('click',openWishModal);
-  //document.getElementById('closeCart').addEventListener('click',closeWishModal);
+  document.getElementById('wlist').addEventListener('click',openWishModal);
+  document.getElementById('closeWlist').addEventListener('click',closeWishModal);
 
 
   //document.getElementById('cartBtn').addEventListener('click', event => document.querySelector('.cart-box').classList.toggle('open'));

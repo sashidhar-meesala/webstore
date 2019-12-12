@@ -264,6 +264,17 @@ li a {
     background: rgba(255, 255, 255, 0.6);
 }
 
+.wLoverlay {
+    position: relative;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 245px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.6);
+}
 .modal-content {
     bottom: 100px;
     top: 100px;
