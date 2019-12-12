@@ -1028,6 +1028,8 @@ window.addEventListener('load', () => {
   document.getElementById('closeCart').addEventListener('click', closeCartModal);
   document.getElementById('wlist').addEventListener('click',openWishModal);
   document.getElementById('closeWlist').addEventListener('click',closeWishModal);
+  document.getElementById('clearF').addEventListener('click',getCartAsHTML);
+
 
 
   //document.getElementById('cartBtn').addEventListener('click', event => document.querySelector('.cart-box').classList.toggle('open'));
